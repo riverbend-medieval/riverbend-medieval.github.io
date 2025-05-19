@@ -153,11 +153,45 @@ footer {
     margin: 2rem 0;
 }
 
-.join .fb-page {
-    margin: 0 auto;
-    display: block;
-    width: 50%;
-    min-width: 380px;
+.timeline {
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.timeline-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.persona-list {
+    margin: 2rem 0;
+}
+
+.persona-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.persona-list li {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 5px;
+}
+
+.persona-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.persona-list a:hover {
+    color: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
