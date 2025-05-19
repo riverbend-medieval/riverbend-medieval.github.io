@@ -148,6 +148,18 @@ footer {
     margin-top: 4rem;
 }
 
+.join h3 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.join .fb-page {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    min-width: 380px;
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
