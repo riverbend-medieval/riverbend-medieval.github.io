@@ -91,6 +91,24 @@ section {
     margin-bottom: 1rem;
 }
 
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.hero .nav-link:hover {
+    color: var(--accent-color);
+}
+
 .about, .join, .contact {
     background-color: white;
     border-radius: 10px;
@@ -192,6 +210,48 @@ footer {
 
 .persona-list a:hover {
     color: var(--secondary-color);
+}
+
+.narrative {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.narrative h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.narrative h4 {
+    font-family: 'Cinzel', serif;
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.narrative p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.narrative a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.narrative a:hover {
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 @media (max-width: 768px) {
