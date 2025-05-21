@@ -89,10 +89,9 @@ main {
 .facebook-sidebar {
     width: 340px;
     flex-shrink: 0;
-    position: fixed;
-    right: calc((100% - 1200px) / 2 + 1rem);
+    position: sticky;
     top: 100px;
-    z-index: 100;
+    height: fit-content;
     background: white;
     padding: 1rem;
     border-radius: 10px;
@@ -307,7 +306,6 @@ footer {
 
     .facebook-sidebar {
         position: relative;
-        right: auto;
         width: 100%;
         margin: 2rem auto;
         max-width: 500px;
