@@ -120,7 +120,7 @@ section {
 
 .hero {
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/late medieval/badger-passant-1658.svg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/late medieval/badger-passant-1658.svg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -261,18 +261,19 @@ footer {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
 .timeline-image {
-    flex-shrink: 0;
-    width: 200px;
+    flex: 0 0 200px;
+    position: relative;
 }
 
 .timeline-image img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .timeline-image .image-caption {
@@ -615,9 +616,10 @@ footer {
     }
 
     .timeline-image {
+        flex: 0 0 auto;
         width: 100%;
-        max-width: 300px;
-        margin: 0 auto 1rem;
+        max-width: 200px;
+        margin: 0 auto;
     }
 }
 
@@ -626,7 +628,8 @@ footer {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    margin: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-text {
@@ -636,16 +639,14 @@ footer {
 
 /* Badger Image Styles */
 .badger-image {
-    flex-shrink: 0;
-    width: 250px;
-    text-align: center;
+    flex: 0 0 300px;
+    position: relative;
 }
 
 .badger-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -664,9 +665,22 @@ footer {
     .about-content {
         flex-direction: column;
     }
-
+    
     .badger-image {
-        width: 200px;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .timeline-content {
+        flex-direction: column;
+    }
+    
+    .timeline-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 200px;
         margin: 0 auto;
     }
 } 
