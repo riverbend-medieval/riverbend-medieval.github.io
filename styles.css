@@ -120,7 +120,7 @@ section {
 
 .hero {
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/riverbend.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/riverbend.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -131,7 +131,7 @@ section {
 
 /* Late Medieval page specific hero background */
 .late-medieval .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/late medieval/badger-passant-1658.svg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/late medieval/badger-passant-1658.svg');
 }
 
 .hero-image-link {
