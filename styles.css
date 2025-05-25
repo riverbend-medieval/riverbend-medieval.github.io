@@ -120,12 +120,36 @@ section {
 
 .hero {
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/riverbend.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/late medieval/badger-passant-1658.svg');
     background-size: cover;
     background-position: center;
     color: white;
     padding: 8rem 2rem;
     margin-bottom: 1rem;
+    position: relative;
+}
+
+.hero-image-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-image-link:hover::after {
+    content: "From: The History of Four-Footed Beasts and Serpents. Published in 1658 in England. Illustrations by Edward Topsell.";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 1000;
 }
 
 .hero h1 {
@@ -215,18 +239,74 @@ footer {
 }
 
 .timeline {
-    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .timeline-item {
+    position: relative;
+    padding: 1.5rem;
     margin-bottom: 2rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-item h3 {
-    color: var(--primary-color);
+.timeline-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.timeline-image {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-image .image-caption {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.timeline-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline-text h3 {
+    color: #8B4513;
     margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+.timeline-text p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.timeline-text a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.timeline-text a:hover {
+    text-decoration: underline;
 }
 
 .persona-list {
@@ -321,6 +401,154 @@ footer {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+.incorporation-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.incorporation-container h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.policies-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.policies-container iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    border-radius: 5px;
+}
+
+.constitution-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.constitution-container iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    border-radius: 5px;
+}
+
+.structure-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.structure-container h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.structure-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Music Section Styles */
+.music {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 2rem 0;
+}
+
+.music h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.music h3 {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Guides and Knighthood Sections */
+.guides, .knighthood {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.guides h2, .knighthood h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.guides p, .knighthood p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.guides .nav-link, .knighthood .nav-link {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.guides .nav-link:hover, .knighthood .nav-link:hover {
+    color: var(--secondary-color);
+}
+
 @media (max-width: 1024px) {
     .content-wrapper {
         flex-direction: column;
@@ -380,5 +608,65 @@ footer {
 
     .facebook-sidebar iframe {
         max-width: 100%;
+    }
+
+    .timeline-content {
+        flex-direction: column;
+    }
+
+    .timeline-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1rem;
+    }
+}
+
+/* About Section Layout */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin: 2rem 0;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Badger Image Styles */
+.badger-image {
+    flex-shrink: 0;
+    width: 250px;
+    text-align: center;
+}
+
+.badger-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.badger-image img:hover {
+    transform: scale(1.05);
+}
+
+.badger-image .image-caption {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .badger-image {
+        width: 200px;
+        margin: 0 auto;
     }
 } 
