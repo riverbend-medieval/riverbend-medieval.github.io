@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Late Medieval Timeline - Riverbend Medieval</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .timeline-filters {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .filter-btn {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .filter-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .filter-btn.active {
+            background: #4a4a4a;
+            color: white;
+        }
+
+        .timeline-item {
+            transition: opacity 0.3s ease;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item.hidden {
+            display: none;
+        }
+
+        .timeline-content {
+            padding: 20px;
+        }
+
+        .timeline-text {
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .timeline-text h3 {
+            color: #4a4a4a;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 10px;
+        }
+
+        .timeline-image {
+            margin-bottom: 15px;
+        }
+
+        .image-caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/riverbend.jpg" alt="Riverbend Medieval Society Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="late-medieval.html">Companie of the Badger</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#join">Join Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/late medieval/badger-passant-1658.svg');">
+            <h1>Timeline of Significant Events</h1>
+            <p>1350-1450 AD</p>
+        </section>
+
+        <section class="timeline">
+            <div class="timeline-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="politics">Politics & War</button>
+                <button class="filter-btn" data-category="culture">Culture & Arts</button>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item" data-category="culture">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://www.agsa.sa.gov.au/collection-publications/collection/works/the-dance-of-death/23020/" target="_blank">
+                                <img src="images/late medieval/black-plague.png" alt="The Dance of Death from Nuremberg Chronicle" style="width: 100%; height: auto; object-fit: contain;">
+                            </a>
+                            <p class="image-caption">The Dance of Death, by Michael Wolgemut (1434/37-1519), from Hartmann Schedel's Nuremberg Chronicle (Liber Chronicarum), c.1493, woodcut on paper</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1348-1350</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Black_Death" target="_blank">Black Death</a> reaches England, causing massive social and economic changes. The plague kills approximately 40-60% of the population, leading to labor shortages and social upheaval.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=9905870" target="_blank">
+                                <img src="images/late medieval/battle-poitiers.jpg" alt="Battle of Poitiers">
+                            </a>
+                            <p class="image-caption">Battle of Poitiers, by Virgil Master (illuminator) - Jean Froissart, Chroniques (Vol. I), Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1356</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Battle_of_Poitiers" target="_blank">Battle of Poitiers</a> - English forces under Edward, the Black Prince, defeat the French and capture King John II of France.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=22706673" target="_blank">
+                                <img src="images/late medieval/treaty-bretigny.jpg" alt="Treaty of Brétigny">
+                            </a>
+                            <p class="image-caption">Chest made to hold the Treaty of Calais (26 October 1360). Treaty of Brétigny, National Archive catalogue E 27/8, Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1360</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Treaty_of_Br%C3%A9tigny" target="_blank">Treaty of Brétigny</a> - England gains significant territories in France, including Calais and Aquitaine.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="culture">
+                    <div class="timeline-content">
+                        <div class="timeline-text">
+                            <h3>1362</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Statute_of_Pleading" target="_blank">Statute of Pleading</a> makes English the official language of court proceedings, marking a significant step in the transition from French to English as the language of government.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="culture">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=39984271" target="_blank">
+                                <img src="images/late medieval/canterbury-tales.jpg" alt="Chaucer's Canterbury Tales">
+                            </a>
+                            <p class="image-caption">Canterbury Tales, by Ken Eckert, CC BY-SA 4.0</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1366</h3>
+                            <p>Geoffrey Chaucer begins writing <a href="https://en.wikipedia.org/wiki/The_Canterbury_Tales" target="_blank">The Canterbury Tales</a>, one of the most important works in Middle English literature.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=7153447" target="_blank">
+                                <img src="images/late medieval/caroline-war.jpg" alt="Medieval battle scene">
+                            </a>
+                            <p class="image-caption">Medieval battle scene, from Jean Froissart's Chronicles, Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1369</h3>
+                            <p>Start of the <a href="https://en.wikipedia.org/wiki/Caroline_War" target="_blank">Caroline War (the second phase of the Hundred Years' War)</a> - French King Charles V declares war on England, beginning a new phase of the Hundred Years' War.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=310482" target="_blank">
+                                <img src="images/late medieval/peasants-revolt.jpg" alt="Peasants' Revolt">
+                            </a>
+                            <p class="image-caption">Peasants' Revolt, from Royal MS 18.E.i-ii f. 175, Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1381</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Peasants%27_Revolt" target="_blank">Peasants' Revolt</a> - Major uprising across England following the introduction of the poll tax.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="culture">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=110861184" target="_blank">
+                                <img src="images/late medieval/wycliffe-bible.jpg" alt="Wycliffe Bible">
+                            </a>
+                            <p class="image-caption">Wycliffe Bible, by Coldupnorth, CC BY-SA 4.0</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1382</h3>
+                            <p>John Wycliffe completes the first English translation of the Bible, making religious texts accessible to the common people.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=30950953" target="_blank">
+                                <img src="images/late medieval/treaty-troyes.jpg" alt="Treaty of Troyes">
+                            </a>
+                            <p class="image-caption">Treaty of Troyes, from the Archives Nationales (France), Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1420</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Treaty_of_Troyes" target="_blank">Treaty of Troyes</a> - Henry V is recognized as heir to the French throne.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=113129343" target="_blank">
+                                <img src="images/late medieval/henry-VI.jpg" alt="Henry VI">
+                            </a>
+                            <p class="image-caption">Henry VI, from the Shrewsbury Book, illuminated by the Master of John Talbot, Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1422</h3>
+                            <p>Death of Henry V and accession of <a href="https://en.wikipedia.org/wiki/Henry_VI_of_England" target="_blank">Henry VI</a> as King of England and France.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=8778514" target="_blank">
+                                <img src="images/late medieval/joan-arc.png" alt="Joan of Arc">
+                            </a>
+                            <p class="image-caption">Joan of Arc, by Clément de Fauquembergue, Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1429-1431</h3>
+                            <p><a href="https://en.wikipedia.org/wiki/Joan_of_Arc" target="_blank">Joan of Arc</a> leads French forces to victory at the Siege of Orléans, marking a turning point in the Hundred Years' War. She is captured and executed in Rouen by English forces in 1431.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="culture">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=9914015" target="_blank">
+                                <img src="images/late medieval/printing-press.jpg" alt="Early printing press">
+                            </a>
+                            <p class="image-caption">Gutenberg Bible, by NYC Wanderer (Kevin Eng), CC BY-SA 2.0</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1436</h3>
+                            <p>Johannes Gutenberg begins developing the printing press, which will revolutionize the spread of knowledge in Europe.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="politics">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=4888648" target="_blank">
+                                <img src="images/late medieval/margaret-anjou.jpg" alt="Margaret of Anjou">
+                            </a>
+                            <p class="image-caption">Margaret of Anjou, by Talbot Master (fl. in Rouen, c. 1430–60), Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1445</h3>
+                            <p>Marriage of Henry VI to <a href="https://en.wikipedia.org/wiki/Margaret_of_Anjou" target="_blank">Margaret of Anjou</a>, strengthening ties between England and France.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="culture">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <a href="https://commons.wikimedia.org/w/index.php?curid=47359536" target="_blank">
+                                <img src="images/late medieval/chaucer.jpg" alt="Geoffrey Chaucer">
+                            </a>
+                            <p class="image-caption">Geoffrey Chaucer, Public Domain</p>
+                        </div>
+                        <div class="timeline-text">
+                            <h3>1448</h3>
+                            <p>The <a href="https://en.wikipedia.org/wiki/Chaucer" target="_blank">Chaucer</a> style of poetry influences the development of the <a href="https://en.wikipedia.org/wiki/English_sonnet" target="_blank">English sonnet</a>, marking a significant development in English literature. <a href="https://www.poetryfoundation.org/articles/70051/learning-the-sonnet" target="_blank">Learn more about the sonnet form →</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const category = button.getAttribute('data-category');
+
+                    timelineItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
