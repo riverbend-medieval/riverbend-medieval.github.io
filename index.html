@@ -74,10 +74,22 @@
                     <br>
                     <p>We are a group of people who are passionate about history and the Middle Ages. We are a group of people who are passionate about history and the Middle Ages. We are a group of people who are passionate about history and the Middle Ages.</p>
                     <br>
-                    <p><a href="personas.html" class="nav-link">View Our Personas →</a></p>
-                    <p><a href="past-events.html" class="nav-link">Past Events →</a></p>
+                    
                 </section>
 
+                <section class="about" id="persona-spotlight">
+                    <h2>Persona in the Spotlight</h2>
+                    <div id="spotlight" style="display:flex; justify-content:center; margin-top: 1rem;">
+                        <a id="spotlight-tile" href="#" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:720px; max-width:95%; overflow:hidden; display:block;">
+                            <img id="spotlight-img" src="" alt="Persona portrait" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
+                            <div style="padding:14px 16px;">
+                                <h4 id="spotlight-title" style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;"></h4>
+                                <p id="spotlight-blurb" style="margin:0; color:#333; font-size:0.95rem;"></p>
+                            </div>
+                        </a>
+                    </div>
+                    <p style="text-align:center; margin-top: 1rem;"><a href="personas.html" class="nav-link">View Our Personas →</a></p>
+                </section>
                 <section class="about">
                     <h2>What We're Doing</h2>
                     
@@ -93,7 +105,22 @@
                                     <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Three eras, encampments, packed crowds, and an epic gallery.</p>
                                 </div>
                             </a>
-                            <!-- Add more tiles here as new events are created -->
+                            <a href="past-events.html#abbey-festival-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
+                                <img src="images/events/Abbey2025/Cover.jpg" alt="Abbey Festival 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
+                                <div style="padding:12px 14px;">
+                                    <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">Abbey Festival 2025</h4>
+                                    <div style="color:#666; font-size:0.95rem;">11–13 July 2025 • Caboolture</div>
+                                    <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Our first campaign to Abbeystowe — laughter, learning, and a grand parade.</p>
+                                </div>
+                            </a>
+                            <a href="past-events.html#makers-fair-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
+                                <img src="images/events/MakersFair2025/RIVERBEND-2025.png" alt="Maker's Fair 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
+                                <div style="padding:12px 14px;">
+                                    <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">Gympie Rotary Heritage Maker's Fair</h4>
+                                    <div style="color:#666; font-size:0.95rem;">5–6 July 2025 • Gympie</div>
+                                    <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Demonstrations and displays at the Showgrounds.</p>
+                                </div>
+                            </a>
                         </div>
                         <p style="text-align:center; margin-top: 1rem;"><a href="past-events.html" class="nav-link">View all past events →</a></p>
                     </div>
@@ -137,5 +164,39 @@
     <footer>
         <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
     </footer>
+
+    <script>
+    (function() {
+        const personas = [
+            { href: 'personas/roger-greenwood.html', title: 'Roger Grenewood — Yeoman Archer & Ventenar', img: 'images/personas/roger.jpg', blurb: 'Veteran archer and leader of men, hardened by decades of campaigning.' },
+            { href: 'personas/lady-cristine.html', title: 'Lady Cristine Grenewood', img: 'images/personas/cristine.jpg', blurb: 'Noblewoman of resilience whose life traversed war and loss.' },
+            { href: 'personas/godwin.html', title: 'Sir Godwin Black — Knight Bachelor', img: 'images/late medieval/houppelande-1350.jpg', blurb: 'A knight raised after Agincourt, skilled in arms and leadership.' },
+            { href: 'personas/edith.html', title: 'Lady Edith Black', img: 'images/personas/Lady Christine.jpg', blurb: 'Steadfast partner and lady of the household, guiding the company.' },
+            { href: 'personas/stephanus.html', title: 'Stephanus Attebregge — Veteran Man-at-Arms', img: 'images/temporary/RMS_Costume_Challenge.jpg', blurb: 'From City Watch to Agincourt veteran seeking service anew.' },
+            { href: 'personas/robert-fastolf.html', title: 'Robert Fastolf — Man-at-Arms', img: 'images/personas/Robert_Fastolf.jpg', blurb: 'Sea-rover turned soldier who fought at Agincourt.' },
+            { href: 'personas/jesska-olave.html', title: 'Jóhanna “Jóka” Olafsdottir — Princess in Exile', img: 'images/personas/jesska_olave.jpg', blurb: 'Norwegian royal in England, forging power among the Danelaw.' },
+            { href: 'personas/merchant-lady-sue.html', title: 'Merchant Lady Sue', img: 'images/personas/De Clare.jpg', blurb: 'Merchant of means, navigating trade and society.' },
+            { href: 'personas/brother-ruadri-de-pacy.html', title: 'Brother Ruadrí de Pacy — Hospitaller Sergeant', img: 'images/early medieval/acorn tree.jpg', blurb: 'Frontier-hardened sergeant trained at Castle Margat.' },
+            { href: 'personas/brother-konrad-christiansen.html', title: 'Brother Konrad Christiansen — Hospitaller Infirmarian', img: 'images/high medieval/Cleric-Knight-Workman.jpg', blurb: 'Latin-literate healer and battle-trained brother at Margat.' },
+            { href: 'personas/james-leslie.html', title: 'James Leslie of the Grove — Man-at-Arms', img: 'images/personas/James.png', blurb: 'Exeter street survivor turned soldier of fortune.' }
+        ];
+
+        function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const pick = pickRandom(personas);
+            const tile = document.getElementById('spotlight-tile');
+            const img = document.getElementById('spotlight-img');
+            const title = document.getElementById('spotlight-title');
+            const blurb = document.getElementById('spotlight-blurb');
+            if (tile && img && title && blurb && pick) {
+                tile.href = pick.href;
+                img.src = pick.img;
+                title.textContent = pick.title;
+                blurb.textContent = pick.blurb;
+            }
+        });
+    })();
+    </script>
 </body>
 </html>

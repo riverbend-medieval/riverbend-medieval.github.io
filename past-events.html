@@ -9,8 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .events-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .events-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .page-layout { max-width: 1200px; margin: 0 auto; padding: 20px; display:flex; gap:24px; }
+        .events-sidebar { width: 260px; flex:0 0 260px; position: sticky; top: 100px; height: fit-content; }
+        .events-sidebar .nav { background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); padding:14px; }
+        .events-sidebar h3 { margin: 0 0 10px 0; font-family:'Cinzel', serif; color: var(--primary-color); font-size: 1.1rem; }
+        .events-sidebar ul { list-style:none; padding:0; margin:0; }
+        .events-sidebar li { margin: 8px 0; }
+        .events-sidebar a { color:#333; text-decoration:none; }
+        .events-sidebar a:hover { text-decoration:underline; }
+
+        .events-container { flex:1; }
+        .events-grid { display: flex; flex-direction: column; gap: 20px; align-items:center; }
         .event-card { background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); overflow: hidden; width: 720px; }
         .event-card summary { list-style: none; display: block; cursor: pointer; padding: 16px 18px; }
         .event-card summary::-webkit-details-marker { display: none; }
@@ -28,7 +37,7 @@
         .thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 6px; margin-top: 8px; }
         .thumbs img { width: 100%; height: 54px; object-fit: cover; border-radius: 4px; border: 2px solid transparent; cursor: pointer; }
         .thumbs img.active { border-color: var(--accent-color); }
-        @media (max-width: 1024px) { .event-card { width: 90%; } }
+        @media (max-width: 1024px) { .events-sidebar { display:none; } .event-card { width: 90%; } }
         @media (max-width: 480px) { .event-card { width: 100%; } }
     </style>
 </head>
@@ -53,9 +62,21 @@
             <p>Highlights from our outings and activities</p>
         </section>
 
-        <section class="events-container">
+        <section class="page-layout">
+            <aside class="events-sidebar">
+                <nav class="nav">
+                    <h3>Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#fraserpop-2025">FraserPop 2025</a></li>
+                        <li><a href="#abbey-festival-2025">Abbey Festival 2025</a></li>
+                        <li><a href="#makers-fair-2025">Maker's Fair 2025</a></li>
+                        <li><a href="#aldershot-workshop-2025">Aldershot Workshop 2025</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="events-container">
             <div class="events-grid">
-                <details id="aldershot-workshop-2025" class="event-card">
+                <details id="aldershot-workshop-2025" class="event-card" data-date="2025-04-13">
                     <summary>
                         <img class="event-thumb" src="images/events/AldershotWorkshop2025/496445968_2530340870653523_668152562134667739_n.jpg" alt="Aldershot Workshop 2025 highlight image" />
                         <h3>Aldershot Workshop Weekend 2025</h3>
@@ -89,7 +110,7 @@
                         </div>
                     </div>
                 </details>
-                <details id="makers-fair-2025" class="event-card">
+                <details id="makers-fair-2025" class="event-card" data-date="2025-07-06">
                     <summary>
                         <img class="event-thumb" src="images/events/MakersFair2025/RIVERBEND-2025.png" alt="Gympie Rotary Heritage Maker's Fair 2025 highlight image" />
                         <h3>Gympie Rotary Heritage Maker's Fair 2025</h3>
@@ -111,7 +132,7 @@
                         </div>
                     </div>
                 </details>
-                <details id="abbey-festival-2025" class="event-card">
+                <details id="abbey-festival-2025" class="event-card" data-date="2025-07-13">
                     <summary>
                         <img class="event-thumb" src="images/events/Abbey2025/Cover.jpg" alt="Abbey Festival 2025 highlight image" />
                         <h3>Abbey Festival 2025</h3>
@@ -147,7 +168,7 @@
                     </div>
                 </details>
 
-                <details id="fraserpop-2025" class="event-card">
+                <details id="fraserpop-2025" class="event-card" data-date="2025-07-20">
                     <summary>
                         <img class="event-thumb" alt="FraserPop 2025 highlight image" />
                         <h3>FraserPop 2025</h3>
@@ -335,6 +356,14 @@
             startAuto();
         }
 
+        function sortEvents() {
+            const grid = document.querySelector('.events-grid');
+            if (!grid) return;
+            const items = Array.from(grid.children);
+            items.sort((a,b) => (b.dataset.date || '').localeCompare(a.dataset.date || ''));
+            items.forEach(el => grid.appendChild(el));
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const g = document.querySelector('.gallery[data-gallery-id="fraserpop2025"]');
             if (g) initGallery(g, fraserPopImages);
@@ -348,6 +377,8 @@
 
             const aldershot = document.querySelector('.gallery[data-gallery-id="aldershot2025"]');
             if (aldershot) initGallery(aldershot, aldershotImages);
+
+            sortEvents();
         });
     })();
     </script>
