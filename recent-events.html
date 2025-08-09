@@ -26,7 +26,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
             overflow: hidden;
-            width: 360px;
+            width: 720px;
         }
         .event-card summary {
             list-style: none;
@@ -48,6 +48,15 @@
         .event-summary {
             color: #333;
             font-size: 0.98rem;
+        }
+        .event-thumb {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
         }
         .event-body {
             border-top: 1px solid #eee;
@@ -106,6 +115,9 @@
         }
         .thumbs img.active { border-color: var(--accent-color); }
 
+        @media (max-width: 1024px) {
+            .event-card { width: 90%; }
+        }
         @media (max-width: 480px) {
             .event-card { width: 100%; }
         }
@@ -136,13 +148,14 @@
             <div class="events-grid">
                 <details class="event-card">
                     <summary>
+                        <img class="event-thumb" alt="FraserPop 2025 highlight image" />
                         <h3>FraserPop 2025</h3>
-                        <div class="event-meta">19–20 July 2025 • Hervey Bay</div>
+                        <div class="event-meta">Saturday 19 & Sunday 20 July 2025 • Maryborough State High School, Kent Street, Maryborough QLD</div>
                         <div class="event-summary">All three eras — Early, High, and Late Medieval — fielded encampments and displays. Big crowds, great combat, and outstanding teamwork. Photos below.</div>
                     </summary>
                     <div class="event-body">
                         <h4>Oyez! Oyez!</h4>
-                        <p>Riverbend Medieval has had another very successful venture out to Fraser Pop 2025 (19th - 20th July 2025) where for the first time all 3 of our eras Early Medieval, high Medieval and Late Medieval all put up encampments and displays.
+                        <p>Riverbend Medieval has had another very successful venture out to Fraser Pop 2025 (Dates: Saturday 19 & Sunday 20 July 2025; Location: Maryborough State High School, Kent Street, Maryborough QLD) where for the first time all 3 of our eras Early Medieval, high Medieval and Late Medieval all put up encampments and displays.
                         We were well received by all who came top see us. In fact we were probably one if not the major attraction.
                         The public were educated and informed, entertained and regaled with tales of days of yore! Two days of great fun and experience fro all.
                         All our members there have made great strides in personal garb, equipment and personas as well as group equipment. You should all be proud.
@@ -231,6 +244,13 @@
             'images/events/FraserPop2025/Viking Lady2  at FraserPop.jpg'
         ];
 
+        function setRandomThumb() {
+            const thumb = document.querySelector('.event-card summary .event-thumb');
+            if (!thumb) return;
+            const pick = fraserPopImages[Math.floor(Math.random() * fraserPopImages.length)];
+            thumb.src = pick;
+        }
+
         function initGallery(el, images) {
             const imgEl = el.querySelector('.gallery-view img');
             const thumbs = el.querySelector('.thumbs');
@@ -277,6 +297,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const g = document.querySelector('.gallery[data-gallery-id="fraserpop2025"]');
             if (g) initGallery(g, fraserPopImages);
+            setRandomThumb();
         });
     })();
     </script>
