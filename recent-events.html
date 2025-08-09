@@ -15,9 +15,10 @@
             padding: 20px;
         }
         .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
         .event-card {
             background: #fff;
@@ -25,6 +26,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
             overflow: hidden;
+            width: 360px;
         }
         .event-card summary {
             list-style: none;
@@ -103,6 +105,10 @@
             cursor: pointer;
         }
         .thumbs img.active { border-color: var(--accent-color); }
+
+        @media (max-width: 480px) {
+            .event-card { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -128,7 +134,7 @@
 
         <section class="events-container">
             <div class="events-grid">
-                <details class="event-card" open>
+                <details class="event-card">
                     <summary>
                         <h3>FraserPop 2025</h3>
                         <div class="event-meta">19–20 July 2025 • Hervey Bay</div>
