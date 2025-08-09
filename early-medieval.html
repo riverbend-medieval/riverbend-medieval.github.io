@@ -66,6 +66,21 @@
             <p><a href="personas.html" class="nav-link">View Our Personas →</a></p>
         </section>
 
+        <section class="about" style="max-width: 1200px; margin: 0 auto;">
+            <h2>Sevenoaks Photo Gallery</h2>
+            <div class="gallery" data-gallery-id="sevenoaks" style="background:#fafafa; border:1px solid #eee; border-radius:8px; padding:10px;">
+                <div class="gallery-view" style="position:relative; width:100%; aspect-ratio:16/9; background:#000; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                    <img alt="Sevenoaks photo" style="width:100%; height:100%; object-fit:contain;" />
+                </div>
+                <div class="gallery-controls" style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                    <button type="button" data-action="prev" style="background:#f4f4f4; border:1px solid #ddd; border-radius:6px; padding:6px 10px; cursor:pointer;">Prev</button>
+                    <div style="font-size:0.9rem;color:#666">Auto-rotating gallery</div>
+                    <button type="button" data-action="next" style="background:#f4f4f4; border:1px solid #ddd; border-radius:6px; padding:6px 10px; cursor:pointer;">Next</button>
+                </div>
+                <div class="thumbs" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(70px,1fr)); gap:6px; margin-top:8px;"></div>
+            </div>
+        </section>
+
         <section class="timeline">
             <details>
                 <summary>
@@ -408,6 +423,66 @@
                     });
                 });
             });
+        </script>
+
+        <script>
+        (function() {
+            const images = [
+                'images/early medieval/photos/518627581_10163490297548156_3587767669223893233_n.jpg',
+                'images/early medieval/photos/518815541_10163490296533156_8604772813508109465_n.jpg',
+                'images/early medieval/photos/519198601_10163490322538156_3432819752086642710_n.jpg',
+                'images/early medieval/photos/519216789_10163490322073156_9104007720769806892_n.jpg',
+                'images/early medieval/photos/519262964_10163490296403156_834684424944025527_n.jpg',
+                'images/early medieval/photos/519670460_10163490319443156_1380231162878927744_n.jpg',
+                'images/early medieval/photos/520513724_10163490297223156_8694169300314808470_n.jpg',
+                'images/early medieval/photos/520526420_10163490304413156_4191970913325099195_n.jpg',
+                'images/early medieval/photos/520571306_10163490318513156_1241310753875391002_n.jpg',
+                'images/early medieval/photos/520833924_10163490323193156_295295158138732349_n.jpg',
+                'images/early medieval/photos/520953487_10163490304488156_7723344914989174601_n.jpg',
+                'images/early medieval/photos/520984620_10163490321553156_1807368162676126168_n.jpg',
+                'images/early medieval/photos/521656547_10163490305278156_1570764047874480181_n.jpg',
+                'images/early medieval/photos/523120844_10163490322893156_2098245434902319012_n.jpg'
+            ];
+
+            function initGallery(el, imgs) {
+                const imgEl = el.querySelector('.gallery-view img');
+                const thumbs = el.querySelector('.thumbs');
+                const prev = el.querySelector('button[data-action="prev"]');
+                const next = el.querySelector('button[data-action="next"]');
+                let idx = 0;
+                let timerId = null;
+
+                function render() {
+                    imgEl.src = imgs[idx];
+                    thumbs.querySelectorAll('img').forEach((t, i) => t.classList.toggle('active', i === idx));
+                }
+                function startAuto() {
+                    stopAuto();
+                    timerId = setInterval(() => { idx = (idx + 1) % imgs.length; render(); }, 4000);
+                }
+                function stopAuto() { if (timerId) clearInterval(timerId); }
+
+                imgs.forEach((src, i) => {
+                    const t = document.createElement('img');
+                    t.src = src; t.alt = 'Sevenoaks thumb ' + (i+1);
+                    t.style.width = '100%'; t.style.height = '54px'; t.style.objectFit = 'cover'; t.style.borderRadius = '4px'; t.style.border = '2px solid transparent';
+                    t.addEventListener('click', () => { idx = i; render(); startAuto(); });
+                    thumbs.appendChild(t);
+                });
+                prev.addEventListener('click', () => { idx = (idx - 1 + imgs.length) % imgs.length; render(); startAuto(); });
+                next.addEventListener('click', () => { idx = (idx + 1) % imgs.length; render(); startAuto(); });
+                el.addEventListener('mouseenter', stopAuto);
+                el.addEventListener('mouseleave', startAuto);
+
+                render();
+                startAuto();
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const g = document.querySelector('.gallery[data-gallery-id="sevenoaks"]');
+                if (g) initGallery(g, images);
+            });
+        })();
         </script>
 
         <section class="contact">
