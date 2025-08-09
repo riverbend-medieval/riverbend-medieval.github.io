@@ -308,10 +308,10 @@
         ];
 
         function setRandomThumb() {
-            const thumb = document.querySelector('.event-card summary .event-thumb');
-            if (!thumb) return;
+            const fraserThumb = document.querySelector('#fraserpop-2025 summary .event-thumb');
+            if (!fraserThumb) return;
             const pick = fraserPopImages[Math.floor(Math.random() * fraserPopImages.length)];
-            thumb.src = pick;
+            fraserThumb.src = pick;
         }
 
         function initGallery(el, images) {
