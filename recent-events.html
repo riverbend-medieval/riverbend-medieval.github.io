@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Events - Riverbend Medieval Society</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .event-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .event-card summary {
+            list-style: none;
+            display: block;
+            cursor: pointer;
+            padding: 16px 18px;
+        }
+        .event-card summary::-webkit-details-marker { display: none; }
+        .event-card summary h3 {
+            margin: 0 0 6px 0;
+            font-family: 'Cinzel', serif;
+            color: var(--primary-color);
+        }
+        .event-meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .event-summary {
+            color: #333;
+            font-size: 0.98rem;
+        }
+        .event-body {
+            border-top: 1px solid #eee;
+            padding: 16px 18px 20px;
+        }
+        .event-body p { margin-bottom: 1rem; }
+        .gallery {
+            margin-top: 10px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .gallery-view {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-view img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .gallery-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .gallery-controls button {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+        .thumbs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .thumbs img {
+            width: 100%;
+            height: 54px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .thumbs img.active { border-color: var(--accent-color); }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/riverbend.jpg" alt="Riverbend Medieval Society Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#join">Join Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Recent Events</h1>
+            <p>Highlights from our latest outings and activities</p>
+        </section>
+
+        <section class="events-container">
+            <div class="events-grid">
+                <details class="event-card" open>
+                    <summary>
+                        <h3>FraserPop 2025</h3>
+                        <div class="event-meta">19–20 July 2025 • Hervey Bay</div>
+                        <div class="event-summary">All three eras — Early, High, and Late Medieval — fielded encampments and displays. Big crowds, great combat, and outstanding teamwork. Photos below.</div>
+                    </summary>
+                    <div class="event-body">
+                        <h4>Oyez! Oyez!</h4>
+                        <p>Riverbend Medieval has had another very successful venture out to Fraser Pop 2025 (19th - 20th July 2025) where for the first time all 3 of our eras Early Medieval, high Medieval and Late Medieval all put up encampments and displays.
+                        We were well received by all who came top see us. In fact we were probably one if not the major attraction.
+                        The public were educated and informed, entertained and regaled with tales of days of yore! Two days of great fun and experience fro all.
+                        All our members there have made great strides in personal garb, equipment and personas as well as group equipment. You should all be proud.
+                        Photos will follow as they become available.
+                        Thanks again for all your work and committment.
+                        <br>in honore et fidelitate servio<br>
+                        Roger Grenewood</p>
+
+                        <h4>Huzzah! Huzzah!</h4>
+                        <p>To all the members who could attend Fraser pop 2025.
+                        You did yourselves and the club proud on the weekend. The three time period plan has now born fruit, and it was great to see both the early and high Middle Ages step up and perform so well.
+                        From the event organising team, once again let us thank those leaders who stepped up and lead from the front Yeoman Roger Greenwood (Late Medieval), Dagmar (Early Medieval) and Lady Sue (High Medieval). As I said yesterday your efforts where outstanding.
+                        To the combatants a special thank you. 6 armoured combatants on both days was outstanding and the level of combat you all produced enthused a crowd that was at standing room only on both days.
+                        Also, a shout out to Man-at-arms Robert Fastolf and Shield Maiden Jóhanna “Jóka” Olafsdottir for making the effort to travel from Gympie on both days to participate in the combat sessions.
+                        And so another Fraser pop ends and after a meeting with the organizer you can all take a pat on the back as being the main draw card once again at Fraser Pop.
+                        <br>YiS,<br>
+                        Event Organising team<br>
+                        Lady Edith Black and Sir Godwin Black</p>
+
+                        <div class="gallery" data-gallery-id="fraserpop2025">
+                            <h4>FraserPop 2025 Photos</h4>
+                            <div class="gallery-view">
+                                <img alt="FraserPop 2025 photo" />
+                            </div>
+                            <div class="gallery-controls">
+                                <button type="button" data-action="prev">Prev</button>
+                                <div style="font-size:0.9rem;color:#666">Auto-rotating gallery</div>
+                                <button type="button" data-action="next">Next</button>
+                            </div>
+                            <div class="thumbs"></div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+    (function() {
+        const fraserPopImages = [
+            'images/events/FraserPop2025/518627581_10163490297548156_3587767669223893233_n.jpg',
+            'images/events/FraserPop2025/518815541_10163490296533156_8604772813508109465_n.jpg',
+            'images/events/FraserPop2025/518825130_10163490104768156_2080198122296075379_n.jpg',
+            'images/events/FraserPop2025/518999279_24191260630564880_3485793086933677085_n.jpg',
+            'images/events/FraserPop2025/519053077_24191257797231830_1084221443926682800_n.jpg',
+            'images/events/FraserPop2025/519198601_10163490322538156_3432819752086642710_n.jpg',
+            'images/events/FraserPop2025/519216789_10163490322073156_9104007720769806892_n.jpg',
+            'images/events/FraserPop2025/519262964_10163490296403156_834684424944025527_n.jpg',
+            'images/events/FraserPop2025/519418547_24191261910564752_3262032145650336661_n.jpg',
+            'images/events/FraserPop2025/519621391_24191261533898123_8197008751282565538_n.jpg',
+            'images/events/FraserPop2025/519670460_10163490319443156_1380231162878927744_n.jpg',
+            'images/events/FraserPop2025/519684314_10163490104633156_8767785572118390265_n.jpg',
+            'images/events/FraserPop2025/520174279_10163490104643156_6924367036893287336_n.jpg',
+            'images/events/FraserPop2025/520198839_24199239229767020_4908515883385578928_n.jpg',
+            'images/events/FraserPop2025/520441097_24191261070564836_4985294207300408162_n.jpg',
+            'images/events/FraserPop2025/520467770_24191259543898322_8265489483647924470_n.jpg',
+            'images/events/FraserPop2025/520513724_10163490297223156_8694169300314808470_n.jpg',
+            'images/events/FraserPop2025/520526420_10163490304413156_4191970913325099195_n.jpg',
+            'images/events/FraserPop2025/520566391_24199239466433663_3211577263361503609_n.jpg',
+            'images/events/FraserPop2025/520571306_10163490318513156_1241310753875391002_n.jpg',
+            'images/events/FraserPop2025/520802042_24191259077231702_6214182824311072608_n.jpg',
+            'images/events/FraserPop2025/520833924_10163490323193156_295295158138732349_n.jpg',
+            'images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg',
+            'images/events/FraserPop2025/520984620_10163490321553156_1807368162676126168_n.jpg',
+            'images/events/FraserPop2025/521286898_24191257047231905_2192435649395466304_n.jpg',
+            'images/events/FraserPop2025/521656547_10163490305278156_1570764047874480181_n.jpg',
+            'images/events/FraserPop2025/522960039_24199240669766876_1747587381861995568_n.jpg',
+            'images/events/FraserPop2025/523120844_10163490322893156_2098245434902319012_n.jpg',
+            'images/events/FraserPop2025/Bowyer and Roger  at FraserPop.jpg',
+            'images/events/FraserPop2025/Bowyer Roger and Godwin  at FraserPop.jpg',
+            'images/events/FraserPop2025/Jackson 2 at FraserPop.jpg',
+            'images/events/FraserPop2025/Jackson at FraserPop.jpg',
+            'images/events/FraserPop2025/ladies  at FraserPop.jpg',
+            'images/events/FraserPop2025/Olivine at FraserPop.jpg',
+            'images/events/FraserPop2025/Olivine2  at FraserPop.jpg',
+            'images/events/FraserPop2025/Olivine3 at FraserPop.jpg',
+            'images/events/FraserPop2025/Robert V Stephen.jpg',
+            'images/events/FraserPop2025/Stephen and Ladies  at FraserPop.jpg',
+            'images/events/FraserPop2025/Sue  at FraserPop.jpg',
+            'images/events/FraserPop2025/Terrence at FraserPop.jpg',
+            'images/events/FraserPop2025/Viking Lady at FraserPop.jpg',
+            'images/events/FraserPop2025/Viking Lady2  at FraserPop.jpg'
+        ];
+
+        function initGallery(el, images) {
+            const imgEl = el.querySelector('.gallery-view img');
+            const thumbs = el.querySelector('.thumbs');
+            const prev = el.querySelector('button[data-action="prev"]');
+            const next = el.querySelector('button[data-action="next"]');
+            let idx = 0;
+            let timerId = null;
+
+            function render() {
+                imgEl.src = images[idx];
+                thumbs.querySelectorAll('img').forEach((t, i) => {
+                    t.classList.toggle('active', i === idx);
+                });
+            }
+
+            function startAuto() {
+                stopAuto();
+                timerId = setInterval(() => {
+                    idx = (idx + 1) % images.length;
+                    render();
+                }, 4000);
+            }
+            function stopAuto() { if (timerId) clearInterval(timerId); }
+
+            // Build thumbs
+            images.forEach((src, i) => {
+                const t = document.createElement('img');
+                t.src = src;
+                t.alt = 'Thumbnail ' + (i+1);
+                t.addEventListener('click', () => { idx = i; render(); startAuto(); });
+                thumbs.appendChild(t);
+            });
+
+            prev.addEventListener('click', () => { idx = (idx - 1 + images.length) % images.length; render(); startAuto(); });
+            next.addEventListener('click', () => { idx = (idx + 1) % images.length; render(); startAuto(); });
+
+            el.addEventListener('mouseenter', stopAuto);
+            el.addEventListener('mouseleave', startAuto);
+
+            render();
+            startAuto();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const g = document.querySelector('.gallery[data-gallery-id="fraserpop2025"]');
+            if (g) initGallery(g, fraserPopImages);
+        });
+    })();
+    </script>
+</body>
+</html>
+
