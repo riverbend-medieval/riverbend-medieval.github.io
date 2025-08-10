@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The High Medieval Company - Riverbend Medieval Society</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The High Medieval Company explores 1100-1300 AD with authentic re-enactment of chivalry, medieval towns, and cultural development. Join our medieval re-enactment group in Queensland for knights, crafts, and historical education.">
+    <meta name="keywords" content="high medieval re-enactment, medieval knights, chivalry re-enactment, medieval re-enactment Queensland, 1100-1300 AD, medieval crafts, historical re-enactment, Riverbend Medieval Society">
+    <meta name="author" content="Riverbend Medieval Society Inc.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="The High Medieval Company - Riverbend Medieval Society">
+    <meta property="og:description" content="The High Medieval Company explores 1100-1300 AD with authentic re-enactment of chivalry, medieval towns, and cultural development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://riverbend-medieval.org.au/high-medieval.html">
+    <meta property="og:image" content="https://riverbend-medieval.org.au/images/riverbend.jpg">
+    <meta property="og:site_name" content="Riverbend Medieval Society Inc.">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The High Medieval Company - Riverbend Medieval Society">
+    <meta name="twitter:description" content="The High Medieval Company explores 1100-1300 AD with authentic re-enactment of chivalry, medieval towns, and cultural development.">
+    <meta name="twitter:image" content="https://riverbend-medieval.org.au/images/riverbend.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://riverbend-medieval.org.au/high-medieval.html">
+    
+    <!-- Bing Webmaster Tools Verification -->
+    <meta name="msvalidate.01" content="037D084B7904CC30CA04919EF1316FC0" />
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/riverbend.jpg" alt="Riverbend Medieval Society Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#join">Join Us</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
 
     <main>
         <section class="hero">
@@ -60,6 +75,21 @@
             <p>Whether you're interested in combat, crafts, or historical research, we welcome new members who share our passion for the high medieval period. No experience is necessary - we provide training and guidance for all aspects of medieval re-enactment.</p>
             <br>
             <p><a href="personas.html" class="nav-link">View Our Personas →</a></p>
+        </section>
+
+        <section class="about" style="max-width: 1200px; margin: 0 auto;">
+            <h2>High Medieval Photo Gallery</h2>
+            <div class="gallery" data-gallery-id="highmedieval" style="background:#fafafa; border:1px solid #eee; border-radius:8px; padding:10px;">
+                <div class="gallery-view" style="position:relative; width:100%; aspect-ratio:16/9; background:#000; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                    <img alt="High Medieval photo" style="width:100%; height:100%; object-fit:contain;" />
+                </div>
+                <div class="gallery-controls" style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+                    <button type="button" data-action="prev" style="background:#f4f4f4; border:1px solid #ddd; border-radius:6px; padding:6px 10px; cursor:pointer;">Prev</button>
+                    <div style="font-size:0.9rem;color:#666">Auto-rotating gallery</div>
+                    <button type="button" data-action="next" style="background:#f4f4f4; border:1px solid #ddd; border-radius:6px; padding:6px 10px; cursor:pointer;">Next</button>
+                </div>
+                <div class="thumbs" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(70px,1fr)); gap:6px; margin-top:8px;"></div>
+            </div>
         </section>
 
         <section class="timeline">
@@ -507,6 +537,55 @@
         </style>
 
         <script>
+        (function() {
+            const images = [
+                'images/high medieval/photos/521286898_24191257047231905_2192435649395466304_n.jpg',
+                'images/high medieval/photos/520467770_24191259543898322_8265489483647924470_n.jpg',
+                'images/high medieval/photos/520802042_24191259077231702_6214182824311072608_n.jpg'
+            ];
+
+            function initGallery(el, imgs) {
+                const imgEl = el.querySelector('.gallery-view img');
+                const thumbs = el.querySelector('.thumbs');
+                const prev = el.querySelector('button[data-action="prev"]');
+                const next = el.querySelector('button[data-action="next"]');
+                let idx = 0;
+                let timerId = null;
+
+                function render() {
+                    imgEl.src = imgs[idx];
+                    thumbs.querySelectorAll('img').forEach((t, i) => t.classList.toggle('active', i === idx));
+                }
+                function startAuto() {
+                    stopAuto();
+                    timerId = setInterval(() => { idx = (idx + 1) % imgs.length; render(); }, 4000);
+                }
+                function stopAuto() { if (timerId) clearInterval(timerId); }
+
+                imgs.forEach((src, i) => {
+                    const t = document.createElement('img');
+                    t.src = src; t.alt = 'High Medieval thumb ' + (i+1);
+                    t.style.width = '100%'; t.style.height = '54px'; t.style.objectFit = 'cover'; t.style.borderRadius = '4px'; t.style.border = '2px solid transparent';
+                    t.addEventListener('click', () => { idx = i; render(); startAuto(); });
+                    thumbs.appendChild(t);
+                });
+                prev.addEventListener('click', () => { idx = (idx - 1 + imgs.length) % imgs.length; render(); startAuto(); });
+                next.addEventListener('click', () => { idx = (idx + 1) % imgs.length; render(); startAuto(); });
+                el.addEventListener('mouseenter', stopAuto);
+                el.addEventListener('mouseleave', startAuto);
+
+                render();
+                startAuto();
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const g = document.querySelector('.gallery[data-gallery-id="highmedieval"]');
+                if (g) initGallery(g, images);
+            });
+        })();
+        </script>
+
+        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const filterButtons = document.querySelectorAll('.filter-btn');
                 const timelineItems = document.querySelectorAll('.timeline-item');
@@ -543,6 +622,10 @@
 
     <footer>
         <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+        <p>Medieval Re-enactment Society serving the Fraser Coast, Queensland, Australia</p>
+        <p>Email: <a href="mailto:secretary.riverbendmedieval@gmail.com">secretary.riverbendmedieval@gmail.com</a></p>
     </footer>
+
+    <script src="navigation.js"></script>
 </body>
 </html> 

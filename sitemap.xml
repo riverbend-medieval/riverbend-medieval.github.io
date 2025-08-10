@@ -16,14 +16,7 @@
     </url>
     
     <url>
-        <loc>https://riverbend-medieval.org.au/past-events.html</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://riverbend-medieval.org.au/recent-events.html</loc>
+        <loc>https://riverbend-medieval.org.au/events.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -34,6 +27,34 @@
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://riverbend-medieval.org.au/queensland-medieval-groups.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://riverbend-medieval.org.au/getting-started.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://riverbend-medieval.org.au/equipment-guides.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://riverbend-medieval.org.au/photo-gallery.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
     
     <!-- Medieval Period Pages -->

@@ -36,10 +36,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        .events-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .page-layout { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            display: flex; 
+            gap: 24px; 
+        }
+        .events-sidebar { 
+            width: 260px; 
+            flex: 0 0 260px; 
+            position: sticky; 
+            top: 100px; 
+            height: fit-content; 
+        }
+        .events-sidebar .nav { 
+            background: #fff; 
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
+            padding: 14px; 
+        }
+        .events-sidebar h3 { 
+            margin: 0 0 10px 0; 
+            font-family: 'Cinzel', serif; 
+            color: var(--primary-color); 
+            font-size: 1.1rem; 
+        }
+        .events-sidebar ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+        .events-sidebar li { 
+            margin: 8px 0; 
+        }
+        .events-sidebar a { 
+            color: #333; 
+            text-decoration: none; 
+        }
+        .events-sidebar a:hover { 
+            text-decoration: underline; 
+        }
+
+        .events-container { 
+            flex: 1; 
         }
         .events-grid {
             display: flex;
@@ -186,12 +227,47 @@
             cursor: pointer;
         }
         .thumbs img.active { border-color: var(--accent-color); }
-
-        @media (max-width: 1024px) {
-            .event-card { width: 90%; }
+        
+        .simple-gallery {
+            margin-top: 10px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 10px;
         }
-        @media (max-width: 480px) {
-            .event-card { width: 100%; }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) { 
+            .events-sidebar { 
+                display: none; 
+            } 
+            .event-card { 
+                width: 90%; 
+            } 
+        }
+        @media (max-width: 480px) { 
+            .event-card { 
+                width: 100%; 
+            } 
         }
     </style>
 </head>
@@ -204,11 +280,27 @@
             <p>Upcoming member events and highlights from our latest outings</p>
         </section>
 
-        <section class="events-container">
-            <h2>Upcoming Events</h2>
-            <p class="events-intro">Our upcoming member-only events. For more details, please check the members Facebook page or contact us directly.</p>
+        <section class="page-layout">
+            <aside class="events-sidebar">
+                <nav class="nav">
+                    <h3>Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#upcoming">Upcoming Events</a></li>
+                        <li><a href="#fraserpop-2025">FraserPop 2025</a></li>
+                        <li><a href="#abbey-festival-2025">Abbey Festival 2025</a></li>
+                        <li><a href="#makers-fair-2025">Maker's Fair 2025</a></li>
+                        <li><a href="#aldershot-workshop-2025">Aldershot Workshop 2025</a></li>
+                        <li><a href="#recent">Recent Events</a></li>
+                    </ul>
+                </nav>
+            </aside>
             
-            <div class="events-grid">
+            <div class="events-container">
+                <section id="upcoming">
+                    <h2>Upcoming Events</h2>
+                    <p class="events-intro">Our upcoming member-only events. For more details, please check the members Facebook page or contact us directly.</p>
+                    
+                    <div class="events-grid">
                 <details class="event-card upcoming-event">
                     <summary>
                         <div class="event-badge member-only">Members Only</div>
@@ -317,17 +409,63 @@
                         Event Organising team<br>
                         Lady Edith Black and Sir Godwin Black</p>
 
-                        <div class="gallery" data-gallery-id="fraserpop2025">
-                            <h4>FraserPop 2025 Photos</h4>
-                            <div class="gallery-view">
-                                <img alt="FraserPop 2025 photo" />
+                        <div class="simple-gallery">
+                            <h4>Event Photos</h4>
+                            <div class="gallery-grid">
+                                <img src="images/events/FraserPop2025/518627581_10163490297548156_3587767669223893233_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/518815541_10163490296533156_8604772813508109465_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/519198601_10163490322538156_3432819752086642710_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/519216789_10163490322073156_9104007720769806892_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/519262964_10163490296403156_834684424944025527_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/519670460_10163490319443156_1380231162878927744_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/520513724_10163490297223156_8694169300314808470_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/520526420_10163490304413156_4191970913325099195_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/520571306_10163490318513156_1241310753875391002_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/520833924_10163490323193156_295295158138732349_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg" alt="FraserPop 2025 photo">
+                                <img src="images/events/FraserPop2025/520984620_10163490321553156_1807368162676126168_n.jpg" alt="FraserPop 2025 photo">
                             </div>
-                            <div class="gallery-controls">
-                                <button type="button" data-action="prev">Prev</button>
-                                <div style="font-size:0.9rem;color:#666">Auto-rotating gallery</div>
-                                <button type="button" data-action="next">Next</button>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="abbey-festival-2025" class="event-card">
+                    <summary>
+                        <img class="event-thumb" src="images/events/Abbey2025/Cover.jpg" alt="Abbey Festival 2025 highlight image" />
+                        <h3>Abbey Festival 2025</h3>
+                        <div class="event-meta">Hosted 11–13 July 2025 • Abbey Museum of Art and Archaeology, 1-63 The Abbey Place, Caboolture QLD 4510</div>
+                        <div class="event-summary">Preliminary report from our first venture to Abbeystowe — laughter, learning, and a grand parade. Photos coming soon.</div>
+                    </summary>
+                    <div class="event-body">
+                        <h4>Oyez! Oyez! Oyez!</h4>
+                        <p>We are returned from our campaign to Abbey Medieval Festival where our intrepid group did a magnificent job and all contributed to the success of our first venture to Abbeystowe!</p>
+                        <p>There was much laughter and jocularity as well as the more serious work of talking to and engaging with the public. All our members did a great job of keeping the public entertained and educated. A number of our members stepped well outside their comfort zones and are to be congratulated.</p>
+                        <p>This trip has helped to strengthen the bonds between the members of this group. Many tales will be told over the coming months and memories refreshed!</p>
+                        <p><strong>This is our group about to step out on Saturday for the Grande Parade:</strong></p>
+                        <ul>
+                            <li>Marc Pigden</li>
+                            <li>Jackson of Stanton</li>
+                            <li>Sir Godwin and Lady Edith Black</li>
+                            <li>Lady Cristine and Yeoman Roger Grenewood</li>
+                            <li>Andrew and Serena Woodhouse</li>
+                            <li>Pierre and Olivine du Pont</li>
+                        </ul>
+                        <div class="simple-gallery">
+                            <h4>Event Photos</h4>
+                            <div class="gallery-grid">
+                                <img src="images/events/Abbey2025/527341460_779281124783885_5881212379762485887_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528145423_779289754783022_5728285985681474819_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528224056_779282851450379_3373298870278063015_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528265152_779281454783852_8161019065476457390_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528422321_779292738116057_1593651773873825847_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528444115_779290691449595_5332278186310071000_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528481899_779292518116079_2750215631127702253_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528505778_779281594783838_8544076223750493531_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528560094_779293871449277_3840080859207405558_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528581302_779290658116265_3405830865186195431_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528644524_779281231450541_4448707847685236112_n.jpg" alt="Abbey Festival 2025 photo">
+                                <img src="images/events/Abbey2025/528749518_779281621450502_6257702570765000163_n.jpg" alt="Abbey Festival 2025 photo">
                             </div>
-                            <div class="thumbs"></div>
                         </div>
                     </div>
                 </details>
@@ -392,39 +530,61 @@
                     </div>
                 </details>
 
-                <details class="event-card">
+                <details id="aldershot-workshop-2025" class="event-card">
                     <summary>
-                        <h3>Aldershot Weekend</h3>
-                        <div class="event-meta">Saturday 12 & Sunday 13 April 2025 • Aldershot</div>
-                        <div class="event-summary">Workshop series featuring medieval crafts, archery, and combat training.</div>
+                        <img class="event-thumb" src="images/events/AldershotWorkshop2025/496445968_2530340870653523_668152562134667739_n.jpg" alt="Aldershot Workshop 2025 highlight image" />
+                        <h3>Aldershot Workshop Weekend 2025</h3>
+                        <div class="event-meta">12–13 April 2025 • Aldershot</div>
+                        <div class="event-summary">Hands-on workshops across brewing, headwear, Viking personas, bow craft, and coopering. Photos below.</div>
                     </summary>
                     <div class="event-body">
-                        <h4>Workshop Schedule</h4>
-                        
-                        <h5>Saturday 12th</h5>
+                        <h4>Saturday</h4>
                         <ul>
-                            <li><strong>10am - Small beer making</strong> - Kyrios Stephanos Maniakes Pogonatos</li>
-                            <li><strong>1pm - Veils</strong> - Lady Edith, Lady Christine and Lady Olivine</li>
-                            <li><strong>3pm - Viking Personas</strong> - Lady Olivine</li>
+                            <li>Stephanos — Ale making</li>
+                            <li>Lady Edith, Lady Christine and Lady Tonya — Ladies Headwear</li>
+                            <li>Lady Tonya — Viking personas</li>
                         </ul>
-                        
-                        <h5>Sunday 13th</h5>
+                        <h4>Sunday</h4>
                         <ul>
-                            <li><strong>9am - Bow making</strong> - Andrew Woodhouse</li>
+                            <li>Bowyer — Bow making and maintenance</li>
+                            <li>Orm — Bucket making and maintenance</li>
                         </ul>
-                        
-                        <h4>Additional Activities</h4>
-                        <p>In addition, the normal activities of Archery and Combat will also be available for members.</p>
-                        
-                        <h4>Event Information</h4>
-                        <ul>
-                            <li>Setup will commence at 0800 so come along and help out if you can</li>
-                            <li>The kitchen will be available as usual for food preparation</li>
-                            <li>The committee will be selling lunch on the 12th for those who wish to partake</li>
-                        </ul>
-                        
-                        <div class="event-cta">
-                            <p><strong>This was a members-only workshop event.</strong></p>
+
+                        <div class="simple-gallery">
+                            <h4>Event Photos</h4>
+                            <div class="gallery-grid">
+                                <img src="images/events/AldershotWorkshop2025/496445968_2530340870653523_668152562134667739_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/496619847_2530340900653520_1146598500752903568_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/496843079_2530341797320097_3892847861367872119_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/496923567_2530340867320190_7702897918297139964_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/496927538_2530341040653506_2482123992165451_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497438770_2530340997320177_2960459511441921200_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497454439_2530341033986840_4245526509474122139_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497728930_2530340970653513_3513778424450591481_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497732697_2530340853986858_1370835896393617690_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497733643_2530341007320176_8930881516632242447_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497852999_2530340937320183_7328750711785078271_n.jpg" alt="Aldershot Workshop 2025 photo">
+                                <img src="images/events/AldershotWorkshop2025/497862408_2530340930653517_5241828424952975216_n.jpg" alt="Aldershot Workshop 2025 photo">
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="makers-fair-2025" class="event-card">
+                    <summary>
+                        <img class="event-thumb" src="images/events/MakersFair2025/RIVERBEND-2025.png" alt="Gympie Rotary Heritage Maker's Fair 2025 highlight image" />
+                        <h3>Gympie Rotary Heritage Maker's Fair 2025</h3>
+                        <div class="event-meta">5–6 July 2025 • Gympie Showgrounds, 77 Exhibition Rd, Gympie</div>
+                        <div class="event-summary">Demonstrations and displays at the Showgrounds. Photos below.</div>
+                    </summary>
+                    <div class="event-body">
+                        <div class="simple-gallery">
+                            <h4>Maker's Fair Photos</h4>
+                            <div class="gallery-grid">
+                                <img src="images/events/MakersFair2025/516197111_24069278462763098_1598060361941413817_n.jpg" alt="Maker's Fair 2025 photo">
+                                <img src="images/events/MakersFair2025/Low-Res-Clean-117-of-148.jpg" alt="Maker's Fair 2025 photo">
+                                <img src="images/events/MakersFair2025/RIVERBEND-2025.png" alt="Maker's Fair 2025 photo">
+                            </div>
                         </div>
                     </div>
                 </details>
@@ -456,6 +616,8 @@
                         </div>
                     </div>
                 </details>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
@@ -465,108 +627,28 @@
     </footer>
 
     <script>
-    (function() {
-        const fraserPopImages = [
-            'images/events/FraserPop2025/518627581_10163490297548156_3587767669223893233_n.jpg',
-            'images/events/FraserPop2025/518815541_10163490296533156_8604772813508109465_n.jpg',
-            'images/events/FraserPop2025/518825130_10163490104768156_2080198122296075379_n.jpg',
-            'images/events/FraserPop2025/518999279_24191260630564880_3485793086933677085_n.jpg',
-            'images/events/FraserPop2025/519053077_24191257797231830_1084221443926682800_n.jpg',
-            'images/events/FraserPop2025/519198601_10163490322538156_3432819752086642710_n.jpg',
-            'images/events/FraserPop2025/519216789_10163490322073156_9104007720769806892_n.jpg',
-            'images/events/FraserPop2025/519262964_10163490296403156_834684424944025527_n.jpg',
-            'images/events/FraserPop2025/519418547_24191261910564752_3262032145650336661_n.jpg',
-            'images/events/FraserPop2025/519621391_24191261533898123_8197008751282565538_n.jpg',
-            'images/events/FraserPop2025/519670460_10163490319443156_1380231162878927744_n.jpg',
-            'images/events/FraserPop2025/519684314_10163490104633156_8767785572118390265_n.jpg',
-            'images/events/FraserPop2025/520174279_10163490104643156_6924367036893287336_n.jpg',
-            'images/events/FraserPop2025/520198839_24199239229767020_4908515883385578928_n.jpg',
-            'images/events/FraserPop2025/520441097_24191261070564836_4985294207300408162_n.jpg',
-            'images/events/FraserPop2025/520467770_24191259543898322_8265489483647924470_n.jpg',
-            'images/events/FraserPop2025/520513724_10163490297223156_8694169300314808470_n.jpg',
-            'images/events/FraserPop2025/520526420_10163490304413156_4191970913325099195_n.jpg',
-            'images/events/FraserPop2025/520566391_24199239466433663_3211577263361503609_n.jpg',
-            'images/events/FraserPop2025/520571306_10163490318513156_1241310753875391002_n.jpg',
-            'images/events/FraserPop2025/520802042_24191259077231702_6214182824311072608_n.jpg',
-            'images/events/FraserPop2025/520833924_10163490323193156_295295158138732349_n.jpg',
-            'images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg',
-            'images/events/FraserPop2025/520984620_10163490321553156_1807368162676126168_n.jpg',
-            'images/events/FraserPop2025/521286898_24191257047231905_2192435649395466304_n.jpg',
-            'images/events/FraserPop2025/521656547_10163490305278156_1570764047874480181_n.jpg',
-            'images/events/FraserPop2025/522960039_24199240669766876_1747587381861995568_n.jpg',
-            'images/events/FraserPop2025/523120844_10163490322893156_2098245434902319012_n.jpg',
-            'images/events/FraserPop2025/Bowyer and Roger  at FraserPop.jpg',
-            'images/events/FraserPop2025/Bowyer Roger and Godwin  at FraserPop.jpg',
-            'images/events/FraserPop2025/Jackson 2 at FraserPop.jpg',
-            'images/events/FraserPop2025/Jackson at FraserPop.jpg',
-            'images/events/FraserPop2025/ladies  at FraserPop.jpg',
-            'images/events/FraserPop2025/Olivine at FraserPop.jpg',
-            'images/events/FraserPop2025/Olivine2  at FraserPop.jpg',
-            'images/events/FraserPop2025/Olivine3 at FraserPop.jpg',
-            'images/events/FraserPop2025/Robert V Stephen.jpg',
-            'images/events/FraserPop2025/Stephen and Ladies  at FraserPop.jpg',
-            'images/events/FraserPop2025/Sue  at FraserPop.jpg',
-            'images/events/FraserPop2025/Terrence at FraserPop.jpg',
-            'images/events/FraserPop2025/Viking Lady at FraserPop.jpg',
-            'images/events/FraserPop2025/Viking Lady2  at FraserPop.jpg'
-        ];
-
-        function setRandomThumb() {
-            const thumb = document.querySelector('.event-card summary .event-thumb');
-            if (!thumb) return;
-            const pick = fraserPopImages[Math.floor(Math.random() * fraserPopImages.length)];
-            thumb.src = pick;
-        }
-
-        function initGallery(el, images) {
-            const imgEl = el.querySelector('.gallery-view img');
-            const thumbs = el.querySelector('.thumbs');
-            const prev = el.querySelector('button[data-action="prev"]');
-            const next = el.querySelector('button[data-action="next"]');
-            let idx = 0;
-            let timerId = null;
-
-            function render() {
-                imgEl.src = images[idx];
-                thumbs.querySelectorAll('img').forEach((t, i) => {
-                    t.classList.toggle('active', i === idx);
-                });
-            }
-
-            function startAuto() {
-                stopAuto();
-                timerId = setInterval(() => {
-                    idx = (idx + 1) % images.length;
-                    render();
-                }, 4000);
-            }
-            function stopAuto() { if (timerId) clearInterval(timerId); }
-
-            // Build thumbs
-            images.forEach((src, i) => {
-                const t = document.createElement('img');
-                t.src = src;
-                t.alt = 'Thumbnail ' + (i+1);
-                t.addEventListener('click', () => { idx = i; render(); startAuto(); });
-                thumbs.appendChild(t);
-            });
-
-            prev.addEventListener('click', () => { idx = (idx - 1 + images.length) % images.length; render(); startAuto(); });
-            next.addEventListener('click', () => { idx = (idx + 1) % images.length; render(); startAuto(); });
-
-            el.addEventListener('mouseenter', stopAuto);
-            el.addEventListener('mouseleave', startAuto);
-
-            render();
-            startAuto();
-        }
-
+        // Simple random thumbnail selection
         document.addEventListener('DOMContentLoaded', function() {
-            const g = document.querySelector('.gallery[data-gallery-id="fraserpop2025"]');
-            if (g) initGallery(g, fraserPopImages);
-            setRandomThumb();
+            const fraserPopImages = [
+                'images/events/FraserPop2025/518627581_10163490297548156_3587767669223893233_n.jpg',
+                'images/events/FraserPop2025/518815541_10163490296533156_8604772813508109465_n.jpg',
+                'images/events/FraserPop2025/519198601_10163490322538156_3432819752086642710_n.jpg',
+                'images/events/FraserPop2025/519216789_10163490322073156_9104007720769806892_n.jpg',
+                'images/events/FraserPop2025/519670460_10163490319443156_1380231162878927744_n.jpg',
+                'images/events/FraserPop2025/520513724_10163490297223156_8694169300314808470_n.jpg',
+                'images/events/FraserPop2025/520526420_10163490304413156_4191970913325099195_n.jpg',
+                'images/events/FraserPop2025/520571306_10163490318513156_1241310753875391002_n.jpg',
+                'images/events/FraserPop2025/520833924_10163490323193156_295295158138732349_n.jpg',
+                'images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg',
+                'images/events/FraserPop2025/520984620_10163490321553156_1807368162676126168_n.jpg'
+            ];
+            
+            const thumb = document.querySelector('.event-card summary .event-thumb');
+            if (thumb) {
+                const pick = fraserPopImages[Math.floor(Math.random() * fraserPopImages.length)];
+                thumb.src = pick;
+            }
         });
-    })();
     </script>
     <script src="navigation.js"></script>
 </body>

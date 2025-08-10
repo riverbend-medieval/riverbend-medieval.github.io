@@ -14,6 +14,18 @@
     <!-- Bing Webmaster Tools Verification -->
     <meta name="msvalidate.01" content="037D084B7904CC30CA04919EF1316FC0" />
     
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'Riverbend Medieval Society - Home',
+            page_location: 'https://riverbend-medieval.org.au/'
+        });
+    </script>
+    
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Riverbend Medieval Society Inc. - Medieval Re-enactment Fraser Coast">
     <meta property="og:description" content="Discover the magic of medieval re-enactment with Riverbend Medieval Society. Experience authentic medieval crafts, combat, and culture from 800-1500 AD.">
@@ -30,6 +42,13 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://riverbend-medieval.org.au/">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -56,6 +75,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Material-UI Components -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"></script>
 </head>
 <body>
     <header>
@@ -64,11 +88,32 @@
                 <img src="images/riverbend.jpg" alt="Riverbend Medieval Society Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#join">Join Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Periods <span class="material-icons">expand_more</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="early-medieval.html">Early Medieval</a></li>
+                        <li><a href="high-medieval.html">High Medieval</a></li>
+                        <li><a href="late-medieval.html">Late Medieval</a></li>
+                    </ul>
+                </li>
+                <li><a href="recent-events.html">Events</a></li>
+                <li><a href="photo-gallery.html">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">More <span class="material-icons">expand_more</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="equipment-guides.html">Equipment</a></li>
+                        <li><a href="queensland-medieval-groups.html">Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#join">Join</a></li>
             </ul>
+            <div class="search-container">
+                <input type="search" placeholder="Search medieval content..." id="search-input">
+                <button type="submit" id="search-button">Search</button>
+            </div>
         </nav>
     </header>
 
@@ -120,6 +165,7 @@
                     <p><a href="constitution.html" class="nav-link">Society Structure and Constitution →</a></p>
                     -->
                     <p><a href="policies.html" class="nav-link">Society Policies and By-Laws →</a></p>
+                    <p><a href="queensland-medieval-groups.html" class="nav-link">Queensland Medieval Groups Directory →</a></p>
                     <br>
                     <p>We are a group of people who are passionate about history and the Middle Ages. We are a group of people who are passionate about history and the Middle Ages. We are a group of people who are passionate about history and the Middle Ages.</p>
                     <br>
@@ -146,7 +192,7 @@
                     <div class="events-preview" style="margin-top: 1.5rem;">
                         
                         <div class="events-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-                            <a href="past-events.html#fraserpop-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
+                            <a href="events.html#fraserpop-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
                                 <img src="images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg" alt="FraserPop 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
                                 <div style="padding:12px 14px;">
                                     <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">FraserPop 2025</h4>
@@ -154,7 +200,7 @@
                                     <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Three eras, encampments, packed crowds, and an epic gallery.</p>
                                 </div>
                             </a>
-                            <a href="past-events.html#abbey-festival-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
+                            <a href="events.html#abbey-festival-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
                                 <img src="images/events/Abbey2025/Cover.jpg" alt="Abbey Festival 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
                                 <div style="padding:12px 14px;">
                                     <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">Abbey Festival 2025</h4>
@@ -162,7 +208,7 @@
                                     <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Our first campaign to Abbeystowe — laughter, learning, and a grand parade.</p>
                                 </div>
                             </a>
-                            <a href="past-events.html#makers-fair-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
+                            <a href="events.html#makers-fair-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
                                 <img src="images/events/MakersFair2025/RIVERBEND-2025.png" alt="Maker's Fair 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
                                 <div style="padding:12px 14px;">
                                     <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">Gympie Rotary Heritage Maker's Fair</h4>
@@ -171,17 +217,55 @@
                                 </div>
                             </a>
                         </div>
-                        <p style="text-align:center; margin-top: 1rem;"><a href="past-events.html" class="nav-link">View all past events →</a></p>
+                        <p style="text-align:center; margin-top: 1rem;"><a href="events.html" class="nav-link">View all events →</a></p>
+                    </div>
+                </section>
+
+                <section class="member-highlights">
+                    <h2>Our Community</h2>
+                    <div class="member-highlights-grid">
+                        <div class="highlight-card">
+                            <div class="highlight-content">
+                                <span class="material-icons highlight-icon">groups</span>
+                                <h3>Diverse Membership</h3>
+                                <p>Our society includes members from all walks of life, from complete beginners to experienced re-enactors. Everyone is welcome to join our medieval adventure.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-content">
+                                <span class="material-icons highlight-icon">school</span>
+                                <h3>Learning Together</h3>
+                                <p>We believe in sharing knowledge and skills. Experienced members help newcomers learn authentic medieval crafts, combat techniques, and historical accuracy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-content">
+                                <span class="material-icons highlight-icon">celebration</span>
+                                <h3>Fun & Camaraderie</h3>
+                                <p>Beyond the historical accuracy, we're a community that enjoys spending time together, sharing laughs, and creating lasting friendships through our shared passion.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <section id="join" class="join">
-                    <h2>Join Our Society</h2>
-                    <p>Are you interested in a new and exciting hobby? Looking to immerse yourself in medieval history and culture? Riverbend Medieval Society Inc. welcomes new members who share our passion for historical re-enactment.</p>
+                    <h2>Join Our Medieval Re-enactment Society</h2>
+                    <p>Are you interested in a new and exciting hobby? Looking to immerse yourself in medieval history and culture? Riverbend Medieval Society Inc. welcomes new members who share our passion for historical re-enactment on the Fraser Coast, Queensland.</p>
                     <br>
-                    <p>Our 2025 season promises to be filled with exciting events, workshops, and demonstrations. Don't miss out on this opportunity to be part of our growing community!</p>
+                    <p>Our 2025 season promises to be filled with exciting events, workshops, and demonstrations across Queensland. From medieval crafts and combat to authentic period re-enactments, there's something for everyone interested in medieval history from 800-1500 AD.</p>
                     <br>
-                    <p><a href="documents/2025/Riverbend Medieval Society Membership form 4-2025.pdf" class="nav-link">Download the 2025 Membership Form →</a></p>
+                    
+                    <div class="cta-section">
+                        <h3>Ready to Join the Medieval Adventure?</h3>
+                        <div class="cta-buttons">
+                            <a href="documents/2025/Riverbend Medieval Society Membership form 4-2025.pdf" class="btn btn-primary">📄 Download Membership Form</a>
+                            <a href="mailto:secretary.riverbendmedieval@gmail.com" class="btn btn-secondary">📧 Contact Us</a>
+                            <a href="events.html" class="btn btn-outline">📅 View Events</a>
+                        </div>
+                    </div>
+                    
                     <br>
                     <p>Join the Australian Reenactors Association (ARA) for your reenactment related insurance needs at: </p>
                     <p> <a href="http://re-enactors.org.au/" class="nav-link">re-enactors.org.au</a></p>
@@ -216,6 +300,8 @@
         <p>Email: <a href="mailto:secretary.riverbendmedieval@gmail.com">secretary.riverbendmedieval@gmail.com</a></p>
     </footer>
 
+    <script src="navigation.js"></script>
+    <script src="search.js"></script>
     <script>
     (function() {
         const personas = [
