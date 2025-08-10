@@ -26,7 +26,7 @@ class MedievalSearch {
             { type: 'persona', title: 'Robert Fastolf', url: 'personas/robert-fastolf.html', keywords: 'man-at-arms, sea-rover, soldier', period: 'Late Medieval' },
             { type: 'persona', title: 'Jóhanna "Jóka" Olafsdottir', url: 'personas/joka.html', keywords: 'princess, norway, exile, danelaw', period: 'Early Medieval' },
             { type: 'persona', title: 'Merchant Lady Sue', url: 'personas/merchant-lady-sue.html', keywords: 'merchant, businesswoman, trade', period: 'High Medieval' },
-            { type: 'persona', title: 'Brother Ruadrí de Pacy', url: 'personas/brother-ruadri-de-pacy.html', keywords: 'hospitaller, sergeant, knight, margat', period: 'High Medieval' },
+            { type: 'persona', title: 'Brother Ruadrí de Pacy', url: 'personas/brother-ruadri-de-pacy.html', keywords: 'hospitaller, sergeant, soldier brother, margat', period: 'High Medieval' },
             { type: 'persona', title: 'Brother Konrad Christiansen', url: 'personas/brother-konrad-christiansen.html', keywords: 'hospitaller, infirmarian, latin, healer', period: 'High Medieval' },
             { type: 'persona', title: 'James Leslie', url: 'personas/james-leslie.html', keywords: 'man-at-arms, scottish, warrior', period: 'Late Medieval' },
             { type: 'persona', title: 'Sergeant Douglas', url: 'personas/sergeant-douglas.html', keywords: 'sergeant, military, trainer', period: 'Late Medieval' },
