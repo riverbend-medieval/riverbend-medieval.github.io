@@ -188,34 +188,9 @@
                 <section class="about">
                     <h2>What We're Doing</h2>
                     
-
                     <div class="events-preview" style="margin-top: 1.5rem;">
-                        
-                        <div class="events-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-                            <a href="events.html#fraserpop-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
-                                <img src="images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg" alt="FraserPop 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
-                                <div style="padding:12px 14px;">
-                                    <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">FraserPop 2025</h4>
-                                    <div style="color:#666; font-size:0.95rem;">19–20 July 2025 • Maryborough</div>
-                                    <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Three eras, encampments, packed crowds, and an epic gallery.</p>
-                                </div>
-                            </a>
-                            <a href="events.html#abbey-festival-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
-                                <img src="images/events/Abbey2025/Cover.jpg" alt="Abbey Festival 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
-                                <div style="padding:12px 14px;">
-                                    <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">Abbey Festival 2025</h4>
-                                    <div style="color:#666; font-size:0.95rem;">11–13 July 2025 • Caboolture</div>
-                                    <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Our first campaign to Abbeystowe — laughter, learning, and a grand parade.</p>
-                                </div>
-                            </a>
-                            <a href="events.html#makers-fair-2025" class="event-tile" style="text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:360px; overflow:hidden;">
-                                <img src="images/events/MakersFair2025/RIVERBEND-2025.png" alt="Maker's Fair 2025" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
-                                <div style="padding:12px 14px;">
-                                    <h4 style="margin:0 0 6px 0; font-family: 'Cinzel', serif; color:#8B4513;">Gympie Rotary Heritage Maker's Fair</h4>
-                                    <div style="color:#666; font-size:0.95rem;">5–6 July 2025 • Gympie</div>
-                                    <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">Demonstrations and displays at the Showgrounds.</p>
-                                </div>
-                            </a>
+                        <div id="dynamic-events-grid" class="events-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+                            <!-- Events will be populated dynamically -->
                         </div>
                         <p style="text-align:center; margin-top: 1rem;"><a href="events.html" class="nav-link">View all events →</a></p>
                     </div>
@@ -332,6 +307,115 @@
                 title.textContent = pick.title;
                 blurb.textContent = pick.blurb;
             }
+        });
+
+        // Dynamic events population for "What We're Doing" section
+        const eventsData = [
+            // Upcoming Events (Priority 1)
+            {
+                id: 'archery-weekend',
+                title: 'Archery Weekend',
+                date: 'Saturday 16 & Sunday 17 August 2025',
+                location: 'Location available to current members',
+                summary: 'Two-day archery tournament with medieval encampment, workshops, and traditional crafts.',
+                image: 'images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg',
+                type: 'upcoming',
+                hasGallery: false
+            },
+            {
+                id: 'riverbend-yule-2025',
+                title: 'Riverbend Yule 2025',
+                date: 'Saturday 8 & Sunday 9 November 2025',
+                location: 'Location available to current members',
+                summary: 'Our second annual Yule event featuring combat tournament, medieval feast, and celebration.',
+                image: 'images/events/Abbey2025/Cover.jpg',
+                type: 'upcoming',
+                hasGallery: false
+            },
+            // Recent Past Events with Galleries (Priority 2)
+            {
+                id: 'fraserpop-2025',
+                title: 'FraserPop 2025',
+                date: 'Saturday 19 & Sunday 20 July 2025',
+                location: 'Maryborough State High School, Kent Street, Maryborough QLD',
+                summary: 'All three eras — Early, High, and Late Medieval — fielded encampments and displays. Big crowds, great combat, and outstanding teamwork.',
+                image: 'images/events/FraserPop2025/520953487_10163490304488156_7723344914989174601_n.jpg',
+                type: 'past',
+                hasGallery: true
+            },
+            {
+                id: 'abbey-festival-2025',
+                title: 'Abbey Festival 2025',
+                date: 'Hosted 11–13 July 2025',
+                location: 'Abbey Museum of Art and Archaeology, Caboolture QLD',
+                summary: 'Preliminary report from our first venture to Abbeystowe — laughter, learning, and a grand parade.',
+                image: 'images/events/Abbey2025/Cover.jpg',
+                type: 'past',
+                hasGallery: true
+            },
+            {
+                id: 'aldershot-workshop-2025',
+                title: 'Aldershot Workshop Weekend 2025',
+                date: '12–13 April 2025',
+                location: 'Aldershot',
+                summary: 'Hands-on workshops across brewing, headwear, Viking personas, bow craft, and coopering.',
+                image: 'images/events/AldershotWorkshop2025/496445968_2530340870653523_668152562134667739_n.jpg',
+                type: 'past',
+                hasGallery: true
+            },
+            {
+                id: 'makers-fair-2025',
+                title: 'Gympie Rotary Heritage Maker\'s Fair 2025',
+                date: '5–6 July 2025',
+                location: 'Gympie Showgrounds, 77 Exhibition Rd, Gympie',
+                summary: 'Demonstrations and displays at the Showgrounds.',
+                image: 'images/events/MakersFair2025/RIVERBEND-2025.png',
+                type: 'past',
+                hasGallery: true
+            }
+        ];
+
+        function populateEventsGrid() {
+            const grid = document.getElementById('dynamic-events-grid');
+            if (!grid) return;
+
+            // Get upcoming events first
+            const upcomingEvents = eventsData.filter(event => event.type === 'upcoming');
+            
+            // Get past events with galleries (most recent first)
+            const pastEventsWithGalleries = eventsData
+                .filter(event => event.type === 'past' && event.hasGallery)
+                .slice(0, 3); // Take only the 3 most recent
+
+            // Combine upcoming events with past events
+            const eventsToShow = [...upcomingEvents, ...pastEventsWithGalleries];
+
+            // Clear existing content
+            grid.innerHTML = '';
+
+            // Create event tiles
+            eventsToShow.forEach(event => {
+                const eventTile = document.createElement('a');
+                eventTile.href = `events.html#${event.id}`;
+                eventTile.className = 'event-tile';
+                eventTile.style.cssText = 'text-decoration:none; color:inherit; background:#fff; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:280px; overflow:hidden;';
+
+                eventTile.innerHTML = `
+                    <img src="${event.image}" alt="${event.title}" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
+                    <div style="padding:12px 14px;">
+                        <h4 style="margin:0 0 6px 0; font-family: \'Cinzel\', serif; color:#8B4513;">${event.title}</h4>
+                        <div style="color:#666; font-size:0.95rem;">${event.date} • ${event.location}</div>
+                        <p style="margin:8px 0 0 0; color:#333; font-size:0.95rem;">${event.summary}</p>
+                    </div>
+                `;
+
+                grid.appendChild(eventTile);
+            });
+        }
+
+        // Populate events when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            populateEventsGrid();
         });
     })();
     </script>
