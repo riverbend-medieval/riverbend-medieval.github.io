@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://riverbend-medieval.org.au/sitemap.xml
+
+# Allow all search engines to crawl the site
+# This helps with SEO and discoverability
