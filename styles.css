@@ -962,7 +962,7 @@ section {
 
 /* Late Medieval page specific hero background */
 .late-medieval .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/late medieval/badger-passant-1658.svg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/late-medieval/badger-passant-1658.svg');
 }
 
 .hero-image-link {
@@ -1607,11 +1607,6 @@ footer {
         right: 1rem;
         font-size: 2rem;
     }
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
     
     .timeline-content {
         flex-direction: column;
@@ -1623,4 +1618,199 @@ footer {
         max-width: 200px;
         margin: 0 auto;
     }
-} 
+}
+
+/* Phase 1 mobile improvements */
+body {
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+p,
+li,
+a,
+button,
+input {
+    overflow-wrap: anywhere;
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-toggle .material-icons {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 0.6rem 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        height: 48px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 0.25rem 0;
+        order: 3;
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a,
+    .dropdown-toggle {
+        display: flex;
+        width: 100%;
+        min-height: 44px;
+        align-items: center;
+        padding: 0.7rem 1rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.06);
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+        display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        color: #fff;
+        padding-left: 2rem;
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container {
+        display: none;
+        width: 100%;
+        margin: 0;
+        order: 4;
+    }
+
+    nav.mobile-nav-open .search-container {
+        display: flex;
+    }
+
+    .search-container input[type="search"],
+    .search-container button {
+        min-height: 44px;
+    }
+
+    main {
+        margin-top: 72px;
+    }
+
+    .hero {
+        padding: 5rem 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about,
+    .join,
+    .contact,
+    .member-highlights {
+        padding: 0.85rem;
+    }
+
+    .highlight-card,
+    .info-card,
+    .equipment-guide,
+    .persona-guide,
+    .join-steps,
+    .first-event-guide,
+    .resources-section,
+    .faq-item {
+        padding: 1rem;
+    }
+
+    .highlight-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .highlight-content p {
+        font-size: 0.95rem;
+    }
+
+    .cta-section {
+        padding: 1.25rem 1rem;
+    }
+
+    .btn,
+    .email-button,
+    .facebook-button {
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .persona-list li {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+}

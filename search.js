@@ -20,8 +20,8 @@ class MedievalSearch {
             // Personas
             { type: 'persona', title: 'Roger Grenewood', url: 'personas/roger-greenwood.html', keywords: 'archer, yeoman, ventenar, agincourt, longbow', period: 'Late Medieval' },
             { type: 'persona', title: 'Lady Cristine Grenewood', url: 'personas/lady-cristine.html', keywords: 'noblewoman, wife, medieval lady', period: 'Late Medieval' },
-            { type: 'persona', title: 'Sir Godwin Black', url: 'personas/godwin.html', keywords: 'knight, bachelor, agincourt, chivalry', period: 'Late Medieval' },
-            { type: 'persona', title: 'Lady Edith Black', url: 'personas/edith.html', keywords: 'lady, household, medieval woman', period: 'Late Medieval' },
+            { type: 'persona', title: 'Sir Godwin Black (Archived)', url: 'archive/personas/godwin.html', keywords: 'archived, former member, knight, bachelor, agincourt, chivalry', period: 'Late Medieval' },
+            { type: 'persona', title: 'Lady Edith Black (Archived)', url: 'archive/personas/edith.html', keywords: 'archived, former member, lady, household, medieval woman', period: 'Late Medieval' },
             { type: 'persona', title: 'Stephanus Attebregge', url: 'personas/stephanus.html', keywords: 'man-at-arms, veteran, ale brewer', period: 'Late Medieval' },
             { type: 'persona', title: 'Robert Fastolf', url: 'personas/robert-fastolf.html', keywords: 'man-at-arms, sea-rover, soldier', period: 'Late Medieval' },
             { type: 'persona', title: 'Jóhanna "Jóka" Olafsdottir', url: 'personas/joka.html', keywords: 'princess, norway, exile, danelaw', period: 'Early Medieval' },
@@ -55,6 +55,12 @@ class MedievalSearch {
             { type: 'page', title: 'Getting Started Guide', url: 'getting-started.html', keywords: 'beginner, join, equipment, new member', period: 'All' },
             { type: 'page', title: 'Queensland Medieval Groups', url: 'queensland-medieval-groups.html', keywords: 'groups, queensland, australia, re-enactment', period: 'Modern' },
             { type: 'page', title: 'Society Policies', url: 'policies.html', keywords: 'policies, rules, constitution, bylaws', period: 'Modern' },
+            { type: 'page', title: 'Website Version Log', url: 'version-log.html', keywords: 'version log, changelog, website updates, history', period: 'Modern' },
+            { type: 'page', title: 'Activities', url: 'activities.html', keywords: 'activities, combat, archery, workshops, crafts, persona', period: 'Modern' },
+            { type: 'page', title: 'Activities: Medieval Cooking', url: 'activities-cooking.html', keywords: 'medieval cooking, feast, camp kitchen, breads, roasts, stew', period: 'Modern' },
+            { type: 'page', title: 'Activities: Archery', url: 'activities-archery.html', keywords: 'archery, bows, arrows, targets, scorekeeping, range', period: 'Modern' },
+            { type: 'page', title: 'Activities: Medieval Crafts', url: 'activities-crafts.html', keywords: 'crafts, bow making, pottery, sewing, weaving, carpentry, brewing', period: 'Modern' },
+            { type: 'page', title: 'Activities: Combat Training', url: 'activities-combat-training.html', keywords: 'combat training, sparring, drills, sword, shield, melee', period: 'Modern' },
             { type: 'page', title: 'Recent Events', url: 'recent-events.html', keywords: 'events, activities, demonstrations, shows', period: 'Modern' },
             { type: 'page', title: 'Events', url: 'events.html', keywords: 'events, past events, upcoming events, history, previous activities', period: 'Modern' },
 
