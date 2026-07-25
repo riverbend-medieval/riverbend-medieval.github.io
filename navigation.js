@@ -214,13 +214,43 @@ function insertMobileJoinBar() {
 }
 
 function bootstrapNavigation() {
+    if (bootstrapNavigation.done) {
+        return;
+    }
+    bootstrapNavigation.done = true;
+
     insertNavigation();
     setupMobileNavigation();
     insertMobileJoinBar();
 
-    if (typeof MedievalSearch !== 'undefined') {
-        new MedievalSearch();
+    ensureSearchInitialized();
+}
+
+function ensureSearchInitialized() {
+    if (window.__rmsSearchInstance) {
+        return;
     }
+
+    function startSearch() {
+        if (typeof MedievalSearch === 'undefined') {
+            return;
+        }
+        if (!document.getElementById('search-input')) {
+            return;
+        }
+        window.__rmsSearchInstance = new MedievalSearch();
+    }
+
+    if (typeof MedievalSearch !== 'undefined') {
+        startSearch();
+        return;
+    }
+
+    // Some pages historically omitted search.js; load it before init.
+    const script = document.createElement('script');
+    script.src = `${getSiteRootPrefix()}search.js`;
+    script.onload = startSearch;
+    document.head.appendChild(script);
 }
 
 document.addEventListener('DOMContentLoaded', bootstrapNavigation);

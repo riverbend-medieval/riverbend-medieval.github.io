@@ -33,4 +33,6 @@ Until a share URL is pasted, the site shows “Album coming soon” for that eve
 
 ## Succession
 
-Keep recovery email / 2FA current on the website Gmail so the next admin can access Photos.
+See the full handover plan: [WEBSITE-ADMIN-SUCCESSION.md](WEBSITE-ADMIN-SUCCESSION.md).
+
+Keep recovery email / 2FA current on the website Gmail so the next admin can access Photos. Do not store passwords in this repository.
