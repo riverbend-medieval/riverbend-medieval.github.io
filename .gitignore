@@ -3,3 +3,6 @@ node_modules/
 .env
 *.log
 .vscode/launch.json
+
+# Local Google Photos migration staging (do not commit)
+_google-photos-upload/

@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://riverbend-medieval.org.au/sitemap.xml
+# Keep archived persona pages out of primary crawl discovery
+Disallow: /archive/
 
-# Allow all search engines to crawl the site
-# This helps with SEO and discoverability
+# Sitemap
+Sitemap: https://riverbend-medieval.org.au/sitemap.xml

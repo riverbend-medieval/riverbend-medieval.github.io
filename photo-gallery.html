@@ -6,14 +6,14 @@
     <title>Photo Gallery - Riverbend Medieval Society</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore our medieval re-enactment photo gallery featuring events, demonstrations, and activities from Riverbend Medieval Society on the Fraser Coast.">
+    <meta name="description" content="Explore Riverbend Medieval Society event photo albums — Abbey, Fraser Pop, Aldershot, and more — hosted on Google Photos.">
     <meta name="keywords" content="medieval photos, re-enactment gallery, medieval events, Fraser Coast medieval, Queensland medieval society">
     <meta name="author" content="Riverbend Medieval Society Inc.">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Photo Gallery - Riverbend Medieval Society">
-    <meta property="og:description" content="Explore our medieval re-enactment photo gallery featuring events, demonstrations, and activities.">
+    <meta property="og:description" content="Explore our medieval re-enactment event photo albums on Google Photos.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://riverbend-medieval.org.au/photo-gallery.html">
     <meta property="og:image" content="https://riverbend-medieval.org.au/images/riverbend.jpg">
@@ -22,7 +22,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Photo Gallery - Riverbend Medieval Society">
-    <meta name="twitter:description" content="Explore our medieval re-enactment photo gallery featuring events, demonstrations, and activities.">
+    <meta name="twitter:description" content="Explore our medieval re-enactment event photo albums on Google Photos.">
     <meta name="twitter:image" content="https://riverbend-medieval.org.au/images/riverbend.jpg">
     
     <!-- Canonical URL -->
@@ -30,18 +30,14 @@
     
     <!-- Bing Webmaster Tools Verification -->
     <meta name="msvalidate.01" content="037D084B7904CC30CA04919EF1316FC0" />
-    
-    <!-- Material-UI Components -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"></script>
-    
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header></header>
 
     <main>
         <section class="hero">
@@ -53,676 +49,93 @@
         <div class="content-wrapper">
             <div class="main-content">
                 <section class="gallery-intro">
-                    <h2>Our Medieval Adventures in Pictures</h2>
-                    <p>Explore our collection of photos from events, demonstrations, and activities. Each image tells a story of medieval life, combat, crafts, and camaraderie.</p>
+                    <h2>Event photo albums</h2>
+                    <p>Full event photo sets are hosted in Google Photos on the website admin account. Open an album below to browse the complete collection. Each tile uses a single cover image kept on this site.</p>
+                </section>
+
+                <section class="photo-gallery">
+                    <div id="photo-albums-grid" class="gallery-grid" aria-live="polite">
+                        <!-- Filled by photo-albums.js -->
+                    </div>
+                </section>
+
+                <section class="gallery-intro">
+                    <h2>Personas &amp; club life</h2>
+                    <p>Member portraits and day-to-day club photos remain on the site. Visit the personas page or activity pages for more.</p>
                 </section>
 
                 <section class="photo-gallery">
                     <div class="gallery-grid">
-                        <!-- FraserPop 2025 Event -->
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/fraser-pop2025/518627581-10163490297548156-3587767669223893233-n.jpg" 
-                                     alt="FraserPop 2025 - Medieval re-enactment event" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>FraserPop 2025</h3>
-                                        <p>Medieval demonstrations and public engagement</p>
-                                        <span class="material-icons">event</span>
+                        <div class="gallery-item" data-category="personas">
+                            <a href="personas.html" class="album-card__link">
+                                <div class="gallery-image">
+                                    <img src="images/personas/roger.jpg" alt="Roger Grenewood - Yeoman Archer" loading="lazy">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-info">
+                                            <h3>Roger Grenewood</h3>
+                                            <p>Yeoman Archer &amp; Ventenar</p>
+                                            <span class="album-card__cta">View personas →</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/fraser-pop2025/518815541-10163490296533156-8604772813508109465-n.jpg" 
-                                     alt="FraserPop 2025 - Combat demonstration" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Combat Display</h3>
-                                        <p>Authentic medieval combat techniques</p>
-                                        <span class="material-icons">sports_martial_arts</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/fraser-pop2025/519198601-10163490322538156-3432819752086642710-n.jpg" 
-                                     alt="Medieval personas in character" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Medieval Personas</h3>
-                                        <p>Our members in authentic period character</p>
-                                        <span class="material-icons">person</span>
+                            <a href="personas.html" class="album-card__link">
+                                <div class="gallery-image">
+                                    <img src="images/personas/cristine.jpg" alt="Lady Cristine Grenewood" loading="lazy">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-info">
+                                            <h3>Lady Cristine</h3>
+                                            <p>Noblewoman of resilience</p>
+                                            <span class="album-card__cta">View personas →</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="combat">
-                            <div class="gallery-image">
-                                <img src="images/events/fraser-pop2025/519216789-10163490322073156-9104007720769806892-n.jpg" 
-                                     alt="Medieval combat training" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Combat Training</h3>
-                                        <p>Skill development and technique practice</p>
-                                        <span class="material-icons">sports_martial_arts</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/fraser-pop2025/519262964-10163490296403156-834684424944025527-n.jpg" 
-                                     alt="Public demonstration at FraserPop" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Public Engagement</h3>
-                                        <p>Sharing medieval history with the community</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/fraser-pop2025/519670460-10163490319443156-1380231162878927744-n.jpg" 
-                                     alt="Medieval crafts demonstration" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Medieval Crafts</h3>
-                                        <p>Traditional skills and techniques</p>
-                                        <span class="material-icons">build</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Abbey Festival 2025 -->
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/abbey2025/527341460-779281124783885-5881212379762485887-n.jpg" 
-                                     alt="Abbey Festival 2025 - Medieval encampment" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Abbey Festival 2025</h3>
-                                        <p>Our first campaign to Abbeystowe</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/abbey2025/528145423-779289754783022-5728285985681474819-n.jpg" 
-                                     alt="Abbey Festival - Grand parade" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Grand Parade</h3>
-                                        <p>Showcasing medieval pageantry</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="combat">
-                            <div class="gallery-image">
-                                <img src="images/events/abbey2025/528224056-779282851450379-3373298870278063015-n.jpg" 
-                                     alt="Combat demonstration at Abbey Festival" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Combat Display</h3>
-                                        <p>Authentic medieval warfare techniques</p>
-                                        <span class="material-icons">sports_martial_arts</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Aldershot Workshop 2025 -->
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot-workshop2025/496445968-2530340870653523-668152562134667739-n.jpg" 
-                                     alt="Medieval workshop - Skill development" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Skill Workshop</h3>
-                                        <p>Learning traditional medieval techniques</p>
-                                        <span class="material-icons">build</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot-workshop2025/496619847-2530340900653520-1146598500752903568-n.jpg" 
-                                     alt="Medieval personas in workshop setting" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Character Development</h3>
-                                        <p>Developing authentic medieval personas</p>
-                                        <span class="material-icons">person</span>
+                            <a href="personas.html" class="album-card__link">
+                                <div class="gallery-image">
+                                    <img src="images/personas/james-and-michael.jpg" alt="James and Michael - Early Medieval" loading="lazy">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-info">
+                                            <h3>James &amp; Michael</h3>
+                                            <p>Early Medieval warriors</p>
+                                            <span class="album-card__cta">View personas →</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Maker's Fair 2025 -->
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/makers-fair2025/516197111-24069278462763098-1598060361941413817-n.jpg" 
-                                     alt="Maker's Fair 2025 - Medieval demonstrations" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Maker's Fair 2025</h3>
-                                        <p>Demonstrations at Gympie Showgrounds</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- AROW 2026 -->
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/arow2026/ladies-paternoster.jpg"
-                                     alt="AROW 2026 - Ladies paternoster craftwork"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>AROW 2026</h3>
-                                        <p>Paternoster craft and period detail</p>
-                                        <span class="material-icons">build</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Aldershot 2026 -->
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-setup.jpg"
-                                     alt="Aldershot 2026 setup"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Aldershot 2026</h3>
-                                        <p>Camp setup and preparations</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-cooking.jpg"
-                                     alt="Aldershot 2026 medieval cooking"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Camp Cooking</h3>
-                                        <p>Food preparation and hearthcraft</p>
-                                        <span class="material-icons">restaurant</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-feasting.jpg"
-                                     alt="Aldershot 2026 feasting"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Aldershot Feast</h3>
-                                        <p>Shared meals and company fellowship</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-feasting1.jpg"
-                                     alt="Aldershot 2026 feast table"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Feast Table</h3>
-                                        <p>Another moment from camp feasting</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-food.jpg"
-                                     alt="Aldershot 2026 food preparation"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Camp Provisions</h3>
-                                        <p>Period food and preparation</p>
-                                        <span class="material-icons">restaurant</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-ladies.jpg"
-                                     alt="Aldershot 2026 ladies in persona"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Persona Group</h3>
-                                        <p>Ladies in period presentation</p>
-                                        <span class="material-icons">person</span>
+                            <a href="personas.html" class="album-card__link">
+                                <div class="gallery-image">
+                                    <img src="images/personas/sven-and-gudrun.jpg" alt="Sven and Gudrun - Viking personas" loading="lazy">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-info">
+                                            <h3>Sven &amp; Gudrun</h3>
+                                            <p>Viking-era personas</p>
+                                            <span class="album-card__cta">View personas →</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-men.jpg"
-                                     alt="Aldershot 2026 men in persona"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Men in Kit</h3>
-                                        <p>Members in field-ready attire</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="crafts">
-                            <div class="gallery-image">
-                                <img src="images/events/aldershot2026/aldershot-potter.jpg"
-                                     alt="Aldershot 2026 pottery craft"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Pottery Work</h3>
-                                        <p>Hands-on historical craft</p>
-                                        <span class="material-icons">build</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Yule 2025 -->
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/yule-setup.jpg"
-                                     alt="Yule 2025 setup"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Yule 2025</h3>
-                                        <p>Event setup and encampment</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="combat">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/yule-fight-board.jpg"
-                                     alt="Yule 2025 fight board"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Fight Board</h3>
-                                        <p>Tournament structure and matchups</p>
-                                        <span class="material-icons">sports_martial_arts</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/crusaders-2.jpg" alt="Yule 2025 crusaders" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Crusaders</h3>
-                                        <p>Persona group portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="combat">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/finals-2.jpg" alt="Yule 2025 finals" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Finals</h3>
-                                        <p>Tournament climax</p>
-                                        <span class="material-icons">sports_martial_arts</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/godwin-2.jpg" alt="Yule 2025 Godwin" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Godwin</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/jackson-2.jpg" alt="Yule 2025 Jackson" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Jackson</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/james-2.jpg" alt="Yule 2025 James" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>James</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/joka-2.jpg" alt="Yule 2025 Joka" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Joka</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/michael-2.jpg" alt="Yule 2025 Michael" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Michael</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/pacey-2.jpg" alt="Yule 2025 Pacey" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Pacey</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/prayer-2.jpg" alt="Yule 2025 prayer" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Prayer</h3>
-                                        <p>Ceremonial moment</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/raine-2.jpg" alt="Yule 2025 Raine" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Raine</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/robert-2.jpg" alt="Yule 2025 Robert" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Robert</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/squires-2.jpg" alt="Yule 2025 squires" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Squires</h3>
-                                        <p>Team portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/steophanus-orm.jpg" alt="Yule 2025 Steophanus and Orm" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Steophanus & Orm</h3>
-                                        <p>Persona pairing</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/terrence-2.jpg" alt="Yule 2025 Terrence" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Terrence</h3>
-                                        <p>Persona portrait</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/events/yule2025/watchers-2.jpg" alt="Yule 2025 watchers" loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Watchers</h3>
-                                        <p>Crowd and participants</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Club Business -->
-                        <div class="gallery-item" data-category="events">
-                            <div class="gallery-image">
-                                <img src="images/club-business/grant-cheque.jpg"
-                                     alt="Riverbend club business grant cheque"
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Club Business</h3>
-                                        <p>Grant cheque presentation</p>
-                                        <span class="material-icons">event</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Persona Photos -->
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/personas/roger.jpg" 
-                                     alt="Roger Grenewood - Yeoman Archer" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Roger Grenewood</h3>
-                                        <p>Yeoman Archer & Ventenar</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/personas/cristine.jpg" 
-                                     alt="Lady Cristine Grenewood" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Lady Cristine</h3>
-                                        <p>Noblewoman of resilience</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/personas/sir-godwin.jpg" 
-                                     alt="Sir Godwin Black - Knight Bachelor" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Sir Godwin Black</h3>
-                                        <p>Knight Bachelor</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/personas/lady-edith.jpg" 
-                                     alt="Lady Edith Black" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Lady Edith Black</h3>
-                                        <p>Steadfast partner and lady</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Early Medieval Photos -->
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/personas/james-and-michael.jpg" 
-                                     alt="James and Michael - Early Medieval" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>James & Michael</h3>
-                                        <p>Early Medieval warriors</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item" data-category="personas">
-                            <div class="gallery-image">
-                                <img src="images/personas/sven-and-gudrun.jpg" 
-                                     alt="Sven and Gudrun - Viking personas" 
-                                     loading="lazy">
-                                <div class="gallery-overlay">
-                                    <div class="gallery-info">
-                                        <h3>Sven & Gudrun</h3>
-                                        <p>Viking-era personas</p>
-                                        <span class="material-icons">person</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </section>
-
-                <!-- Lightbox Modal -->
-                <div id="lightbox" class="lightbox">
-                    <span class="close-lightbox">&times;</span>
-                    <img id="lightbox-img" src="" alt="">
-                    <div id="lightbox-caption"></div>
-                    <button class="lightbox-nav prev">
-                        <span class="material-icons">chevron_left</span>
-                    </button>
-                    <button class="lightbox-nav next">
-                        <span class="material-icons">chevron_right</span>
-                    </button>
-                </div>
 
                 <section class="gallery-cta">
                     <h2>Join Our Medieval Adventure</h2>
                     <p>Want to be part of these amazing experiences? Join Riverbend Medieval Society and create your own medieval memories!</p>
                     
                     <div class="cta-buttons">
-                        <a href="getting-started.html" class="btn btn-primary">📖 Getting Started</a>
-                        <a href="mailto:secretary.riverbendmedieval@gmail.com" class="btn btn-secondary">📧 Contact Us</a>
-                        <a href="recent-events.html" class="btn btn-outline">📅 Upcoming Events</a>
+                        <a href="getting-started.html" class="btn btn-primary">Getting Started</a>
+                        <a href="mailto:secretary.rms.medieval@gmail.com" class="btn btn-secondary">Contact Us</a>
+                        <a href="events.html" class="btn btn-outline">Events</a>
                     </div>
                 </section>
             </div>
@@ -734,13 +147,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+        <p>&copy; 2026 Riverbend Medieval Society Inc. All rights reserved.</p>
         <p>Medieval Re-enactment Society serving the Fraser Coast, Queensland, Australia</p>
-        <p>Email: <a href="mailto:secretary.riverbendmedieval@gmail.com">secretary.riverbendmedieval@gmail.com</a></p>
+        <p>Email: <a href="mailto:secretary.rms.medieval@gmail.com">secretary.rms.medieval@gmail.com</a></p>
     </footer>
 
     <script src="search.js"></script>
-    <script src="gallery.js"></script>
+    <script src="photo-albums.js"></script>
     <script src="navigation.js"></script>
 </body>
 </html>

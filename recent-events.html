@@ -6,27 +6,27 @@
     <title>Events - Riverbend Medieval Society</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Upcoming and recent events from Riverbend Medieval Society. Stay updated with medieval re-enactment events, workshops, and demonstrations across the Fraser Coast, Queensland.">
+    <meta name="description" content="Upcoming and recent events from Riverbend Medieval Society, including Fellowship of the Bow and Blade 2026, Fraser Pop, Abbey Medieval Festival, and member activities on the Fraser Coast.">
     <meta name="keywords" content="recent medieval events, Riverbend Medieval Society latest events, medieval re-enactment Queensland, Fraser Coast medieval events, medieval workshops Queensland">
     <meta name="author" content="Riverbend Medieval Society Inc.">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, follow">
     
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Events - Riverbend Medieval Society">
-    <meta property="og:description" content="Upcoming and recent events from Riverbend Medieval Society. Stay updated with medieval re-enactment events, workshops, and demonstrations.">
+    <meta property="og:description" content="Upcoming and recent Riverbend events including Fellowship of the Bow and Blade 2026, Fraser Pop, and Abbey Medieval Festival.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://riverbend-medieval.org.au/recent-events.html">
+    <meta property="og:url" content="https://riverbend-medieval.org.au/events.html">
     <meta property="og:image" content="https://riverbend-medieval.org.au/images/riverbend.jpg">
     <meta property="og:site_name" content="Riverbend Medieval Society Inc.">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Events - Riverbend Medieval Society">
-    <meta name="twitter:description" content="Upcoming and recent events from Riverbend Medieval Society. Stay updated with medieval re-enactment events, workshops, and demonstrations.">
+    <meta name="twitter:description" content="Upcoming and recent Riverbend events including Fellowship of the Bow and Blade 2026, Fraser Pop, and Abbey Medieval Festival.">
     <meta name="twitter:image" content="https://riverbend-medieval.org.au/images/riverbend.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://riverbend-medieval.org.au/recent-events.html">
+    <link rel="canonical" href="https://riverbend-medieval.org.au/events.html">
     
     <!-- Bing Webmaster Tools Verification -->
     <meta name="msvalidate.01" content="037D084B7904CC30CA04919EF1316FC0" />
@@ -135,6 +135,30 @@
             padding: 16px 18px 20px;
         }
         .event-body p { margin-bottom: 1rem; }
+        .simple-gallery {
+            margin-top: 10px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
         .gallery {
             margin-top: 10px;
             background: #fafafa;
@@ -209,74 +233,22 @@
             <p class="events-intro">Latest scheduled events and appearances. Member-only events are marked below.</p>
             
             <div class="events-grid">
-                <details id="riverbend-archery-tournament-2026" class="event-card upcoming-event">
+                <details id="fellowship-bow-and-blade-2026" class="event-card upcoming-event">
                     <summary>
-                        <div class="event-badge member-only">Members Only</div>
-                        <img class="event-thumb" src="images/events/fraser-pop2025/520953487-10163490304488156-7723344914989174601-n.jpg" alt="Riverbend Archery Tournament" />
-                        <h3>Riverbend Archery Tournament - RMS Hosting</h3>
-                        <div class="event-meta">Sat, 16 May-17 May • Members only</div>
-                        <div class="event-summary">Member-only archery tournament weekend hosted by Riverbend Medieval Society.</div>
+                        <img class="event-thumb" src="images/events/upcoming/fellowship-bow-and-blade-2026.jpg" alt="Fellowship of the Bow and Blade 2026" />
+                        <h3>Fellowship of the Bow and Blade, 2026</h3>
+                        <div class="event-meta">Fri, 14 Aug–Sun, 17 Aug • Aldershot Scout Grounds</div>
+                        <div class="event-summary">Riverbend's first big effort to run a re-enactment weekend event from scratch. Longbow archery, combat training, workshops, and a Saturday night feast.</div>
                     </summary>
                     <div class="event-body">
                         <div class="event-cta">
-                            <p><strong>This is a members-only event.</strong> Please refer to the members channels for full schedule details.</p>
-                        </div>
-                    </div>
-                </details>
-
-                <details id="bunnings-sausage-sizzle-2026" class="event-card upcoming-event">
-                    <summary>
-                        <img class="event-thumb" src="images/events/upcoming/bunnings-sausage-sizzle.png" alt="RMS Bunnings Sausage Sizzle Fundraiser" />
-                        <h3>RMS Bunnings Sausage Sizzle Fundraiser</h3>
-                        <div class="event-meta">Sun, 14 Jun at 07:00</div>
-                        <div class="event-summary">Community fundraiser to support Riverbend Medieval Society.</div>
-                    </summary>
-                    <div class="event-body">
-                        <div class="event-cta">
-                            <p><strong>Public fundraiser event.</strong> Come along and support RMS.</p>
-                        </div>
-                    </div>
-                </details>
-
-                <details id="aldershot-weekend-high-medieval-2026" class="event-card upcoming-event">
-                    <summary>
-                        <div class="event-badge member-only">Members Only</div>
-                        <img class="event-thumb" src="images/high-medieval/cleric-knight-workman.jpg" alt="Aldershot Weekend - High Medieval Hosting" />
-                        <h3>Aldershot Weekend - High Medieval Hosting</h3>
-                        <div class="event-meta">Sat, 20 Jun-21 Jun • Members only</div>
-                        <div class="event-summary">High Medieval hosted weekend for current members.</div>
-                    </summary>
-                    <div class="event-body">
-                        <div class="event-cta">
-                            <p><strong>This is a members-only event.</strong> Please refer to the members channels for details.</p>
-                        </div>
-                    </div>
-                </details>
-
-                <details id="abbey-medieval-festival-2026" class="event-card upcoming-event">
-                    <summary>
-                        <img class="event-thumb" src="images/events/upcoming/abbey-medieval-festival-2026.png" alt="Abbey Medieval Festival 2026" />
-                        <h3>Abbey Medieval Festival - Company of the Badger encampment</h3>
-                        <div class="event-meta">Thu, 9 Jul-13 Jul</div>
-                        <div class="event-summary">Company of the Badger encampment at Abbey Medieval Festival 2026.</div>
-                    </summary>
-                    <div class="event-body">
-                        <div class="event-cta">
-                            <p><a href="https://www.abbeymedievalfestival.com/amf2026/" target="_blank" rel="noopener noreferrer">Event website: Abbey Medieval Festival 2026 →</a></p>
-                        </div>
-                    </div>
-                </details>
-
-                <details id="fraser-pop-2026" class="event-card upcoming-event">
-                    <summary>
-                        <img class="event-thumb" src="images/events/upcoming/fraser-pop-2026.png" alt="Fraser Pop 2026" />
-                        <h3>Fraser Pop 2026</h3>
-                        <div class="event-meta">Fri, 17 Jul-19 Jul</div>
-                        <div class="event-summary">Riverbend Medieval Society returns to Fraser Pop.</div>
-                    </summary>
-                    <div class="event-body">
-                        <div class="event-cta">
-                            <p><a href="https://fraserpop.com.au/" target="_blank" rel="noopener noreferrer">Event website: Fraser Pop →</a></p>
+                            <p><strong>Hosted by Riverbend Medieval Society</strong> at Aldershot Scout Grounds.</p>
+                            <ul>
+                                <li>Longbow archery</li>
+                                <li>Combat training</li>
+                                <li>Workshops</li>
+                                <li>Saturday night feast</li>
+                            </ul>
                         </div>
                     </div>
                 </details>
@@ -286,6 +258,81 @@
         <section class="events-container">
             <h2>Recent Events</h2>
             <div class="events-grid">
+                <details id="fraser-pop-2026" class="event-card">
+                    <summary>
+                        <img class="event-thumb" src="images/events/fraser-pop2026/cover.jpg" alt="Fraser Pop 2026" />
+                        <h3>Fraser Pop 2026</h3>
+                        <div class="event-meta">Fri, 17 Jul–19 Jul 2026</div>
+                        <div class="event-summary">Riverbend Medieval Society returned to Fraser Pop.</div>
+                    </summary>
+                    <div class="event-body">
+                        <div class="event-cta">
+                            <p><a href="https://fraserpop.com.au/" target="_blank" rel="noopener noreferrer">Event website: Fraser Pop →</a></p>
+                        </div>
+                        <div class="event-photos" data-album-id="fraser-pop2026"><h4>Event photos</h4></div>
+                    </div>
+                </details>
+
+                <details id="abbey-medieval-festival-2026" class="event-card">
+                    <summary>
+                        <img class="event-thumb" src="images/events/abbey2026/cover.jpg" alt="Abbey Medieval Festival 2026" />
+                        <h3>Abbey Medieval Festival - Company of the Badger encampment</h3>
+                        <div class="event-meta">Thu, 9 Jul–13 Jul 2026</div>
+                        <div class="event-summary">Company of the Badger encampment at Abbey Medieval Festival 2026.</div>
+                    </summary>
+                    <div class="event-body">
+                        <div class="event-cta">
+                            <p><a href="https://www.abbeymedievalfestival.com/amf2026/" target="_blank" rel="noopener noreferrer">Event website: Abbey Medieval Festival 2026 →</a></p>
+                        </div>
+                        <div class="event-photos" data-album-id="abbey2026"><h4>Event photos</h4></div>
+                    </div>
+                </details>
+
+                <details id="aldershot-weekend-high-medieval-2026" class="event-card">
+                    <summary>
+                        <div class="event-badge member-only">Members Only</div>
+                        <img class="event-thumb" src="images/events/aldershot2026/cover.jpg" alt="Aldershot Weekend - High Medieval Hosting" />
+                        <h3>Aldershot Weekend - High Medieval Hosting</h3>
+                        <div class="event-meta">Sat, 20 Jun–21 Jun 2026 • Members only</div>
+                        <div class="event-summary">High Medieval hosted weekend for current members.</div>
+                    </summary>
+                    <div class="event-body">
+                        <div class="event-cta">
+                            <p><strong>This was a members-only event.</strong></p>
+                        </div>
+                        <div class="event-photos" data-album-id="aldershot2026"><h4>Event photos</h4></div>
+                    </div>
+                </details>
+
+                <details id="bunnings-sausage-sizzle-2026" class="event-card">
+                    <summary>
+                        <img class="event-thumb" src="images/events/upcoming/bunnings-sausage-sizzle.png" alt="RMS Bunnings Sausage Sizzle Fundraiser" />
+                        <h3>RMS Bunnings Sausage Sizzle Fundraiser</h3>
+                        <div class="event-meta">Sun, 14 Jun 2026</div>
+                        <div class="event-summary">Community fundraiser in support of Riverbend Medieval Society.</div>
+                    </summary>
+                    <div class="event-body">
+                        <div class="event-cta">
+                            <p><strong>Public fundraiser event.</strong></p>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="riverbend-archery-tournament-2026" class="event-card">
+                    <summary>
+                        <div class="event-badge member-only">Members Only</div>
+                        <img class="event-thumb" src="images/events/fraser-pop2025/cover.jpg" alt="Riverbend Archery Tournament" />
+                        <h3>Riverbend Archery Tournament - RMS Hosting</h3>
+                        <div class="event-meta">Sat, 16 May–17 May 2026 • Members only</div>
+                        <div class="event-summary">Member-only archery tournament weekend hosted by Riverbend Medieval Society.</div>
+                    </summary>
+                    <div class="event-body">
+                        <div class="event-cta">
+                            <p><strong>This was a members-only event.</strong></p>
+                        </div>
+                    </div>
+                </details>
+
                 <details class="event-card">
                     <summary>
                         <h3>AROW - Abbey re-enactors Only week-end</h3>
@@ -379,6 +426,7 @@
 
                 <details class="event-card">
                     <summary>
+                        <img class="event-thumb" src="images/events/yule2025/cover.jpg" alt="Riverbend Yule 2025" />
                         <h3>Riverbend Yule 2025</h3>
                         <div class="event-meta">Saturday 8 & Sunday 9 November 2025 • Location available to current members</div>
                         <div class="event-summary">Second annual Yule event featuring combat tournament, medieval feast, and celebration.</div>
@@ -387,12 +435,13 @@
                         <div class="event-cta">
                             <p><strong>This was a members-only event.</strong></p>
                         </div>
+                        <div class="event-photos" data-album-id="yule2025"><h4>Event photos</h4></div>
                     </div>
                 </details>
 
                 <details class="event-card">
                     <summary>
-                        <img class="event-thumb" alt="FraserPop 2025 highlight image" />
+                        <img class="event-thumb" src="images/events/fraser-pop2025/cover.jpg" alt="FraserPop 2025 highlight image" />
                         <h3>FraserPop 2025</h3>
                         <div class="event-meta">Saturday 19 & Sunday 20 July 2025 • Maryborough State High School, Kent Street, Maryborough QLD</div>
                         <div class="event-summary">All three eras — Early, High, and Late Medieval — fielded encampments and displays. Big crowds, great combat, and outstanding teamwork. Photos below.</div>
@@ -419,18 +468,7 @@
                         Event Organising team<br>
                         Lady Edith Black and Sir Godwin Black</p>
 
-                        <div class="gallery" data-gallery-id="fraserpop2025">
-                            <h4>FraserPop 2025 Photos</h4>
-                            <div class="gallery-view">
-                                <img alt="FraserPop 2025 photo" />
-                            </div>
-                            <div class="gallery-controls">
-                                <button type="button" data-action="prev">Prev</button>
-                                <div style="font-size:0.9rem;color:#666">Auto-rotating gallery</div>
-                                <button type="button" data-action="next">Next</button>
-                            </div>
-                            <div class="thumbs"></div>
-                        </div>
+                        <div class="event-photos" data-album-id="fraser-pop2025"><h4>Event photos</h4></div>
                     </div>
                 </details>
 
@@ -563,113 +601,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+        <p>&copy; 2026 Riverbend Medieval Society Inc. All rights reserved.</p>
     </footer>
 
-    <script>
-    (function() {
-        const fraserPopImages = [
-            'images/events/fraser-pop2025/518627581-10163490297548156-3587767669223893233-n.jpg',
-            'images/events/fraser-pop2025/518815541-10163490296533156-8604772813508109465-n.jpg',
-            'images/events/fraser-pop2025/518825130-10163490104768156-2080198122296075379-n.jpg',
-            'images/events/fraser-pop2025/518999279-24191260630564880-3485793086933677085-n.jpg',
-            'images/events/fraser-pop2025/519053077-24191257797231830-1084221443926682800-n.jpg',
-            'images/events/fraser-pop2025/519198601-10163490322538156-3432819752086642710-n.jpg',
-            'images/events/fraser-pop2025/519216789-10163490322073156-9104007720769806892-n.jpg',
-            'images/events/fraser-pop2025/519262964-10163490296403156-834684424944025527-n.jpg',
-            'images/events/fraser-pop2025/519418547-24191261910564752-3262032145650336661-n.jpg',
-            'images/events/fraser-pop2025/519621391-24191261533898123-8197008751282565538-n.jpg',
-            'images/events/fraser-pop2025/519670460-10163490319443156-1380231162878927744-n.jpg',
-            'images/events/fraser-pop2025/519684314-10163490104633156-8767785572118390265-n.jpg',
-            'images/events/fraser-pop2025/520174279-10163490104643156-6924367036893287336-n.jpg',
-            'images/events/fraser-pop2025/520198839-24199239229767020-4908515883385578928-n.jpg',
-            'images/events/fraser-pop2025/520441097-24191261070564836-4985294207300408162-n.jpg',
-            'images/events/fraser-pop2025/520467770-24191259543898322-8265489483647924470-n.jpg',
-            'images/events/fraser-pop2025/520513724-10163490297223156-8694169300314808470-n.jpg',
-            'images/events/fraser-pop2025/520526420-10163490304413156-4191970913325099195-n.jpg',
-            'images/events/fraser-pop2025/520566391-24199239466433663-3211577263361503609-n.jpg',
-            'images/events/fraser-pop2025/520571306-10163490318513156-1241310753875391002-n.jpg',
-            'images/events/fraser-pop2025/520802042-24191259077231702-6214182824311072608-n.jpg',
-            'images/events/fraser-pop2025/520833924-10163490323193156-295295158138732349-n.jpg',
-            'images/events/fraser-pop2025/520953487-10163490304488156-7723344914989174601-n.jpg',
-            'images/events/fraser-pop2025/520984620-10163490321553156-1807368162676126168-n.jpg',
-            'images/events/fraser-pop2025/521286898-24191257047231905-2192435649395466304-n.jpg',
-            'images/events/fraser-pop2025/521656547-10163490305278156-1570764047874480181-n.jpg',
-            'images/events/fraser-pop2025/522960039-24199240669766876-1747587381861995568-n.jpg',
-            'images/events/fraser-pop2025/523120844-10163490322893156-2098245434902319012-n.jpg',
-            'images/events/fraser-pop2025/bowyer-and-roger-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/bowyer-roger-and-godwin-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/jackson-2-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/jackson-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/ladies-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/olivine-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/olivine2-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/olivine3-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/robert-v-stephen.jpg',
-            'images/events/fraser-pop2025/stephen-and-ladies-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/sue-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/terrence-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/viking-lady-at-fraser-pop.jpg',
-            'images/events/fraser-pop2025/viking-lady2-at-fraser-pop.jpg'
-        ];
-
-        function setRandomThumb() {
-            const thumb = document.querySelector('.event-card summary .event-thumb');
-            if (!thumb) return;
-            const pick = fraserPopImages[Math.floor(Math.random() * fraserPopImages.length)];
-            thumb.src = pick;
-        }
-
-        function initGallery(el, images) {
-            const imgEl = el.querySelector('.gallery-view img');
-            const thumbs = el.querySelector('.thumbs');
-            const prev = el.querySelector('button[data-action="prev"]');
-            const next = el.querySelector('button[data-action="next"]');
-            let idx = 0;
-            let timerId = null;
-
-            function render() {
-                imgEl.src = images[idx];
-                thumbs.querySelectorAll('img').forEach((t, i) => {
-                    t.classList.toggle('active', i === idx);
-                });
-            }
-
-            function startAuto() {
-                stopAuto();
-                timerId = setInterval(() => {
-                    idx = (idx + 1) % images.length;
-                    render();
-                }, 4000);
-            }
-            function stopAuto() { if (timerId) clearInterval(timerId); }
-
-            // Build thumbs
-            images.forEach((src, i) => {
-                const t = document.createElement('img');
-                t.src = src;
-                t.alt = 'Thumbnail ' + (i+1);
-                t.addEventListener('click', () => { idx = i; render(); startAuto(); });
-                thumbs.appendChild(t);
-            });
-
-            prev.addEventListener('click', () => { idx = (idx - 1 + images.length) % images.length; render(); startAuto(); });
-            next.addEventListener('click', () => { idx = (idx + 1) % images.length; render(); startAuto(); });
-
-            el.addEventListener('mouseenter', stopAuto);
-            el.addEventListener('mouseleave', startAuto);
-
-            render();
-            startAuto();
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const g = document.querySelector('.gallery[data-gallery-id="fraserpop2025"]');
-            if (g) initGallery(g, fraserPopImages);
-            setRandomThumb();
-        });
-    })();
-    </script>
+    <script src="photo-albums.js"></script>
     <script src="navigation.js"></script>
 </body>
 </html>

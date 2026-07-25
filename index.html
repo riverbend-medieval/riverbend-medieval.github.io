@@ -14,18 +14,6 @@
     <!-- Bing Webmaster Tools Verification -->
     <meta name="msvalidate.01" content="037D084B7904CC30CA04919EF1316FC0" />
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
-            page_title: 'Riverbend Medieval Society - Home',
-            page_location: 'https://riverbend-medieval.org.au/'
-        });
-    </script>
-    
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Riverbend Medieval Society Inc. - Medieval Re-enactment Fraser Coast">
     <meta property="og:description" content="Discover the magic of medieval re-enactment with Riverbend Medieval Society. Experience authentic medieval crafts, combat, and culture from 800-1500 AD.">
@@ -44,42 +32,136 @@
     <link rel="canonical" href="https://riverbend-medieval.org.au/">
     
     <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     
-    <!-- Structured Data for SEO -->
+    <!-- Structured Data for SEO / AI discovery -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "SportsClub"],
         "name": "Riverbend Medieval Society Inc.",
+        "alternateName": "RMS",
         "url": "https://riverbend-medieval.org.au/",
         "logo": "https://riverbend-medieval.org.au/images/riverbend.jpg",
-        "description": "Riverbend Medieval Society Inc. brings medieval history to life through authentic re-enactment on the Fraser Coast. Join our community of history enthusiasts for medieval crafts, combat, and culture from 800-1500 AD.",
+        "description": "Riverbend Medieval Society Inc. is a not-for-profit medieval re-enactment group on the Fraser Coast, Queensland, covering 800–1500 AD through living history, combat, archery, crafts, and public education.",
+        "email": "secretary.rms.medieval@gmail.com",
         "address": {
             "@type": "PostalAddress",
-            "addressRegion": "Fraser Coast",
+            "addressRegion": "Queensland",
+            "addressLocality": "Fraser Coast",
             "addressCountry": "AU"
         },
-        "sameAs": [],
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61556601099042"
+        ],
         "foundingDate": "2018",
-        "areaServed": "Fraser Coast, Queensland, Australia",
-        "serviceType": "Medieval Re-enactment and Historical Education"
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Fraser Coast, Queensland, Australia"
+        },
+        "knowsAbout": [
+            "Medieval re-enactment",
+            "Historical education",
+            "Longbow archery",
+            "Medieval combat",
+            "Living history",
+            "Medieval crafts"
+        ],
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Australian Reenactors Association",
+            "url": "https://re-enactors.org.au/"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Riverbend Medieval Society Inc.",
+        "url": "https://riverbend-medieval.org.au/",
+        "description": "Official website for Riverbend Medieval Society Inc., a Fraser Coast medieval re-enactment group.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Riverbend Medieval Society Inc.",
+            "url": "https://riverbend-medieval.org.au/"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://riverbend-medieval.org.au/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Riverbend Medieval Society companies",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Sevenoaks Early Medieval Company",
+                "url": "https://riverbend-medieval.org.au/early-medieval.html",
+                "description": "Early medieval living history covering approximately 850–950 AD."
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "The High Medieval Company",
+                "url": "https://riverbend-medieval.org.au/high-medieval.html",
+                "description": "High medieval living history covering approximately 1100–1300 AD."
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "The Companie of the Badger",
+                "url": "https://riverbend-medieval.org.au/late-medieval.html",
+                "description": "Late medieval living history covering approximately 1350–1450 AD."
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Fellowship of the Bow and Blade, 2026",
+        "description": "Riverbend's first big effort to run a re-enactment weekend event from scratch, featuring longbow archery, combat training, workshops, and a Saturday night feast.",
+        "startDate": "2026-08-14",
+        "endDate": "2026-08-17",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "image": "https://riverbend-medieval.org.au/images/events/upcoming/fellowship-bow-and-blade-2026.jpg",
+        "location": {
+            "@type": "Place",
+            "name": "Aldershot Scout Grounds",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Aldershot",
+                "addressRegion": "QLD",
+                "addressCountry": "AU"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Riverbend Medieval Society Inc.",
+            "url": "https://riverbend-medieval.org.au/"
+        },
+        "url": "https://riverbend-medieval.org.au/events.html#fellowship-bow-and-blade-2026"
     }
     </script>
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Material-UI Components -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js"></script>
 </head>
 <body>
     <header>
@@ -117,26 +199,30 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h1>Welcome to Riverbend Medieval Society Inc.</h1>
-            <p>Discover the magic of medieval re-enactment on the Fraser Coast</p>
-            <p>Experience authentic medieval crafts, combat, and culture from 800-1500 AD</p>
-            <br>
+    <main id="main-content">
+        <section id="home" class="hero" aria-labelledby="home-heading">
+            <h1 id="home-heading">Riverbend Medieval Society Inc.</h1>
+            <p>Medieval re-enactment on the Fraser Coast, Queensland</p>
+            <p>Authentic crafts, combat, archery, and living history from 800–1500 AD</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="getting-started.html">Join Us</a>
+                <a class="btn btn-secondary" href="events.html">See Events</a>
+                <a class="btn btn-outline" href="activities.html">What We Do</a>
+            </div>
         </section>
 
         <div class="content-wrapper">
             <div class="main-content">
-                <section id="about" class="about">
-                    <h2>About Riverbend Medieval Society</h2>
-                    <p>Riverbend Medieval Society Inc. is a vibrant community dedicated to bringing medieval history to life through authentic re-enactment on the Fraser Coast, Queensland. We offer a unique opportunity to step back in time and experience the rich culture, traditions, and crafts of the medieval period from 800-1500 AD.</p>
-                    <ol style="margin: 1rem 0 1.5rem 1.25rem; padding-right: 0.25rem;">
-                        <li>To be a not for profit organisation to promote social and physical enactment for persons and their families for the purpose of promoting the historical era and lifestyles of persons living in England between the eras of 800 to 1500 AD.</li>
+                <section id="about" class="about" aria-labelledby="about-heading">
+                    <h2 id="about-heading">About Riverbend Medieval Society</h2>
+                    <p>Riverbend Medieval Society Inc. is a not-for-profit community dedicated to bringing medieval history to life through authentic re-enactment on the Fraser Coast, Queensland. Members research, train, and present the culture, crafts, and martial traditions of England between 800 and 1500 AD.</p>
+                    <h3>Our purpose</h3>
+                    <ol>
+                        <li>To be a not-for-profit organisation promoting social and physical enactment for people and families interested in English historical life from 800 to 1500 AD.</li>
                         <li>To promote and encourage tourism to the Fraser Coast.</li>
                     </ol>
-                    <br>
-                    <P>The society is comprised of three sub-groups: </P>
-                    <h3>Our Sub-Groups</h3>
+                    <p>The society is comprised of three companies:</p>
+                    <h3>Our Companies</h3>
                     <div class="subgroup-tiles" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin: 0.5rem 0 1rem;">
                         <a href="early-medieval.html" class="subgroup-tile" style="text-decoration:none; color:inherit; width:min(100%,280px); border:1px solid #ddd; border-radius:10px; overflow:hidden; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
                             <img src="images/early-medieval/acorn-tree.jpg" alt="Sevenoaks Early Medieval" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;">
@@ -236,14 +322,14 @@
                         <h3>Ready to Join the Medieval Adventure?</h3>
                         <div class="cta-buttons">
                             <a href="documents/2025/Riverbend Medieval Society Membership form 4-2025.pdf" class="btn btn-primary">📄 Download Membership Form</a>
-                            <a href="mailto:secretary.riverbendmedieval@gmail.com" class="btn btn-secondary">📧 Contact Us</a>
+                            <a href="mailto:secretary.rms.medieval@gmail.com" class="btn btn-secondary">📧 Contact Us</a>
                             <a href="events.html" class="btn btn-outline">📅 View Events</a>
                         </div>
                     </div>
                     
                     <br>
                     <p>Join the Australian Reenactors Association (ARA) for your reenactment related insurance needs at: </p>
-                    <p> <a href="http://re-enactors.org.au/" class="nav-link">re-enactors.org.au</a></p>
+                    <p> <a href="https://re-enactors.org.au/" class="nav-link">re-enactors.org.au</a></p>
                     <br>
                     <h3>For all the latest news and updates, please follow our Facebook page.</h3>
                 </section>
@@ -259,7 +345,7 @@
                     <h2>Contact Us</h2>
                     <p>For more information about joining Riverbend Medieval Society Inc., please contact our Group Secretary:</p>
                     <div class="contact-buttons">
-                        <a href="mailto:secretary.riverbendmedieval@gmail.com" class="email-button">Email Us</a>
+                        <a href="mailto:secretary.rms.medieval@gmail.com" class="email-button">Email Us</a>
                     </div>
                 </section>
             </div>
@@ -270,19 +356,19 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+        <p>&copy; 2026 Riverbend Medieval Society Inc. All rights reserved.</p>
         <p>Medieval Re-enactment Society serving the Fraser Coast, Queensland, Australia</p>
-        <p>Email: <a href="mailto:secretary.riverbendmedieval@gmail.com">secretary.riverbendmedieval@gmail.com</a></p>
+        <p>Email: <a href="mailto:secretary.rms.medieval@gmail.com">secretary.rms.medieval@gmail.com</a></p>
     </footer>
 
-    <script src="navigation.js"></script>
     <script src="search.js"></script>
+    <script src="photo-albums.js"></script>
+    <script src="navigation.js"></script>
     <script>
     (function() {
         const personas = [
             { href: 'personas/roger-greenwood.html', title: 'Roger Grenewood — Yeoman Archer & Ventenar', img: 'images/personas/roger.jpg', blurb: 'Veteran archer and leader of men, hardened by decades of campaigning.' },
             { href: 'personas/lady-cristine.html', title: 'Lady Cristine Grenewood', img: 'images/personas/cristine.jpg', blurb: 'Noblewoman of resilience whose life traversed war and loss.' },
-            { href: 'personas/stephanus.html', title: 'Stephanus Attebregge — Veteran Man-at-Arms', img: 'images/personas/stephanus-2.jpg', blurb: 'From City Watch to Agincourt veteran seeking service anew.' },
             { href: 'personas/robert-fastolf.html', title: 'Robert Fastolf — Man-at-Arms', img: 'images/personas/robert-fastolf.jpg', blurb: 'Sea-rover turned soldier who fought at Agincourt.' },
             { href: 'personas/joka.html', title: 'Jóhanna “Jóka” Olafsdottir — Princess in Exile', img: 'images/personas/joka.jpg', blurb: 'Norwegian royal in England, forging power among the Danelaw.' },
             { href: 'personas/merchant-lady-sue.html', title: 'Merchant Lady Sue', img: 'images/personas/lady-sue.jpg', blurb: 'Merchant of means, navigating trade and society.' },
@@ -311,65 +397,48 @@
         const eventsData = [
             // Upcoming Events (Priority 1)
             {
-                id: 'riverbend-archery-tournament-2026',
-                title: 'Riverbend Archery Tournament - RMS Hosting',
-                date: 'Sat, 16 May-17 May',
-                location: 'Members only',
-                summary: 'Member-only archery weekend hosted by Riverbend Medieval Society.',
-                image: 'images/events/fraser-pop2025/520953487-10163490304488156-7723344914989174601-n.jpg',
-                type: 'upcoming',
-                hasGallery: false
-            },
-            {
-                id: 'bunnings-sausage-sizzle-2026',
-                title: 'RMS Bunnings Sausage Sizzle Fundraiser',
-                date: 'Sun, 14 Jun at 07:00',
-                location: 'Public fundraiser',
-                summary: 'Support Riverbend Medieval Society at our Bunnings sausage sizzle fundraiser.',
-                image: 'images/events/upcoming/bunnings-sausage-sizzle.png',
-                type: 'upcoming',
-                hasGallery: false
-            },
-            {
-                id: 'aldershot-weekend-high-medieval-2026',
-                title: 'Aldershot Weekend - High Medieval Hosting',
-                date: 'Sat, 20 Jun-21 Jun',
-                location: 'Members only',
-                summary: 'High Medieval hosted weekend event for current members.',
-                image: 'images/high-medieval/cleric-knight-workman.jpg',
-                type: 'upcoming',
-                hasGallery: false
-            },
-            {
-                id: 'abbey-medieval-festival-2026',
-                title: 'Abbey Medieval Festival',
-                date: 'Thu, 9 Jul-13 Jul',
-                location: 'Abbey Museum, Caboolture',
-                summary: 'Company of the Badger encampment at the Abbey Medieval Festival.',
-                image: 'images/events/upcoming/abbey-medieval-festival-2026.png',
-                type: 'upcoming',
-                hasGallery: false
-            },
-            {
-                id: 'fraser-pop-2026',
-                title: 'Fraser Pop 2026',
-                date: 'Fri, 17 Jul-19 Jul',
-                location: 'Fraser Coast',
-                summary: 'Riverbend returns for Fraser Pop 2026.',
-                image: 'images/events/upcoming/fraser-pop-2026.png',
+                id: 'fellowship-bow-and-blade-2026',
+                title: 'Fellowship of the Bow and Blade, 2026',
+                date: 'Fri, 14 Aug–Sun, 17 Aug',
+                location: 'Aldershot Scout Grounds',
+                summary: 'Riverbend\'s first big effort to run a re-enactment weekend from scratch — longbow archery, combat training, workshops, and a Saturday night feast.',
+                image: 'images/events/upcoming/fellowship-bow-and-blade-2026.jpg',
                 type: 'upcoming',
                 hasGallery: false
             },
             // Recent Past Events with Galleries (Priority 2)
+            {
+                id: 'fraser-pop-2026',
+                title: 'Fraser Pop 2026',
+                date: '17–19 July 2026',
+                location: 'Fraser Coast',
+                summary: 'Riverbend Medieval Society returned to Fraser Pop.',
+                image: 'images/events/fraser-pop2026/cover.jpg',
+                type: 'past',
+                hasGallery: true,
+                albumId: 'fraser-pop2026'
+            },
+            {
+                id: 'abbey-festival-2026',
+                title: 'Abbey Medieval Festival 2026',
+                date: '9–13 July 2026',
+                location: 'Abbey Museum, Caboolture',
+                summary: 'Company of the Badger encampment at Abbey Medieval Festival 2026.',
+                image: 'images/events/abbey2026/cover.jpg',
+                type: 'past',
+                hasGallery: true,
+                albumId: 'abbey2026'
+            },
             {
                 id: 'fraserpop-2025',
                 title: 'FraserPop 2025',
                 date: 'Saturday 19 & Sunday 20 July 2025',
                 location: 'Maryborough State High School, Kent Street, Maryborough QLD',
                 summary: 'All three eras — Early, High, and Late Medieval — fielded encampments and displays. Big crowds, great combat, and outstanding teamwork.',
-                image: 'images/events/fraser-pop2025/520953487-10163490304488156-7723344914989174601-n.jpg',
+                image: 'images/events/fraser-pop2025/cover.jpg',
                 type: 'past',
-                hasGallery: true
+                hasGallery: true,
+                albumId: 'fraser-pop2025'
             },
             {
                 id: 'abbey-festival-2025',
@@ -377,9 +446,10 @@
                 date: 'Hosted 11–13 July 2025',
                 location: 'Abbey Museum of Art and Archaeology, Caboolture QLD',
                 summary: 'Preliminary report from our first venture to Abbeystowe — laughter, learning, and a grand parade.',
-                image: 'images/events/abbey2025/cover-2.jpg',
+                image: 'images/events/abbey2025/cover.jpg',
                 type: 'past',
-                hasGallery: true
+                hasGallery: true,
+                albumId: 'abbey2025'
             },
             {
                 id: 'aldershot-workshop-2025',
@@ -387,9 +457,10 @@
                 date: '12–13 April 2025',
                 location: 'Aldershot',
                 summary: 'Hands-on workshops across brewing, headwear, Viking personas, bow craft, and coopering.',
-                image: 'images/events/aldershot-workshop2025/496445968-2530340870653523-668152562134667739-n.jpg',
+                image: 'images/events/aldershot-workshop2025/cover.jpg',
                 type: 'past',
-                hasGallery: true
+                hasGallery: true,
+                albumId: 'aldershot-workshop2025'
             },
             {
                 id: 'makers-fair-2025',
@@ -397,9 +468,10 @@
                 date: '5–6 July 2025',
                 location: 'Gympie Showgrounds, 77 Exhibition Rd, Gympie',
                 summary: 'Demonstrations and displays at the Showgrounds.',
-                image: 'images/events/makers-fair2025/riverbend-2025.png',
+                image: 'images/events/makers-fair2025/cover.jpg',
                 type: 'past',
-                hasGallery: true
+                hasGallery: true,
+                albumId: 'makers-fair2025'
             },
             {
                 id: 'archery-weekend',
@@ -407,7 +479,7 @@
                 date: 'Saturday 16 & Sunday 17 August 2025',
                 location: 'Location available to current members',
                 summary: 'Two-day archery tournament with medieval encampment, workshops, and traditional crafts.',
-                image: 'images/events/fraser-pop2025/520953487-10163490304488156-7723344914989174601-n.jpg',
+                image: 'images/events/fraser-pop2025/cover.jpg',
                 type: 'past',
                 hasGallery: false
             },
@@ -477,9 +549,10 @@
                 date: 'Saturday 8 & Sunday 9 November 2025',
                 location: 'Location available to current members',
                 summary: 'Our second annual Yule event featuring combat tournament, medieval feast, and celebration.',
-                image: 'images/events/abbey2025/cover-2.jpg',
+                image: 'images/events/yule2025/cover.jpg',
                 type: 'past',
-                hasGallery: false
+                hasGallery: true,
+                albumId: 'yule2025'
             }
         ];
 

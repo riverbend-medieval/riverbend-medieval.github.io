@@ -94,11 +94,44 @@
                 <section class="about">
                     <h2>How to Use This Log</h2>
                     <p>This page tracks notable updates to the Riverbend Medieval Society website. Newest entries appear first.</p>
-                    <p><span class="last-updated-badge"><span class="material-icons">update</span>Last updated: 2026-05-08</span></p>
+                    <p><span class="last-updated-badge"><span class="material-icons">update</span>Last updated: 2026-07-25</span></p>
                 </section>
 
                 <section class="about">
                     <h2>Recent Changes</h2>
+                    <div class="info-card changelog-entry">
+                        <h3>2026-07-25 - Google Photos albums linked</h3>
+                        <ul>
+                            <li><span class="tag tag-content">Content</span>Wired shared Google Photos albums into <code>photo-albums.js</code> for Abbey 2026, Fraser Pop 2026, Aldershot 2026, Abbey 2025, Fraser Pop 2025, Aldershot Workshop 2025, Maker’s Fair 2025, and Aldershot Yule 2025.</li>
+                            <li><span class="tag tag-content">Content</span>AROW 2026 left cover-only (no public album). Gallery and event pages now open live albums instead of “coming soon” for the linked events.</li>
+                            <li><span class="tag tag-content">Admin</span>Event photo archives remain on <code>website.riverbendmedieval@gmail.com</code>; site keeps one <code>cover.jpg</code> per event. Checklist: <a href="PHOTO-ALBUMS-ADMIN.md">PHOTO-ALBUMS-ADMIN.md</a>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card changelog-entry">
+                        <h3>2026-07-25 - Event photos moved to Google Photos</h3>
+                        <ul>
+                            <li><span class="tag tag-content">Content</span>Event photo archives now live in Google Photos on <code>website.riverbendmedieval@gmail.com</code>. The site keeps one <code>cover.jpg</code> per event and links to shared albums.</li>
+                            <li><span class="tag tag-content">Content</span>Photo Gallery rebuilt as album tiles; Events / Recent / Past pages use “View photos on Google Photos” links driven by <code>photo-albums.js</code>.</li>
+                            <li><span class="tag tag-content">Admin</span>Upload/share checklist: <a href="PHOTO-ALBUMS-ADMIN.md">PHOTO-ALBUMS-ADMIN.md</a>.</li>
+                            <li><span class="tag tag-fix">Fix</span>Removed bulk event gallery images from the working tree (~70MB → ~3.5MB under <code>images/events</code>, excluding upcoming promo art).</li>
+                        </ul>
+                        <p><strong>New event photo workflow:</strong> (1) create album + Anyone-with-link share on the website Gmail Photos account, (2) add/update <code>images/events/&lt;slug&gt;/cover.jpg</code>, (3) add or update the entry in <code>photo-albums.js</code> with the share URL. Keep account recovery options current for succession.</p>
+                    </div>
+
+                    <div class="info-card changelog-entry">
+                        <h3>2026-07-25 - Contact, events, personas, and SEO refresh</h3>
+                        <ul>
+                            <li><span class="tag tag-content">Content</span>Updated contact email to secretary.rms.medieval@gmail.com across the site.</li>
+                            <li><span class="tag tag-content">Content</span>Moved May–July 2026 events into recent/past listings and added Fellowship of the Bow and Blade (14–17 Aug 2026).</li>
+                            <li><span class="tag tag-content">Content</span>Archived Godwin, Edith, and Stephanus personas; added Abbey 2026 and Fraser Pop 2026 photo sets.</li>
+                            <li><span class="tag tag-fix">Fix</span>Repaired shared navigation on persona pages (logo paths and header wrapping).</li>
+                            <li><span class="tag tag-seo">SEO</span>Rebuilt sitemap, refreshed robots.txt, added missing persona/page meta tags, and updated Organization schema.</li>
+                            <li><span class="tag tag-fix">Fix</span>Full site audit: removed unused MUI bundles, fixed search init order, relative favicons, wired Aldershot 2026 photos, and compressed oversized event images.</li>
+                            <li><span class="tag tag-content">UX</span>Simplified primary navigation (Home, Events, Activities, Personas, Join + Explore), added AI-friendly schema, and improved mobile thumb-friendly controls.</li>
+                        </ul>
+                    </div>
+
                     <div class="info-card changelog-entry">
                         <h3>2026-05-08 - Activities and events expansion</h3>
                         <ul>
@@ -135,12 +168,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Riverbend Medieval Society Inc. All rights reserved.</p>
+        <p>&copy; 2026 Riverbend Medieval Society Inc. All rights reserved.</p>
         <p>Medieval Re-enactment Society serving the Fraser Coast, Queensland, Australia</p>
-        <p>Email: <a href="mailto:secretary.riverbendmedieval@gmail.com">secretary.riverbendmedieval@gmail.com</a></p>
+        <p>Email: <a href="mailto:secretary.rms.medieval@gmail.com">secretary.rms.medieval@gmail.com</a></p>
     </footer>
 
-    <script src="navigation.js"></script>
     <script src="search.js"></script>
+
+
+    <script src="navigation.js"></script>
 </body>
 </html>

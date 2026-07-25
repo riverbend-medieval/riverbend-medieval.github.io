@@ -22,7 +22,7 @@ class MedievalSearch {
             { type: 'persona', title: 'Lady Cristine Grenewood', url: 'personas/lady-cristine.html', keywords: 'noblewoman, wife, medieval lady', period: 'Late Medieval' },
             { type: 'persona', title: 'Sir Godwin Black (Archived)', url: 'archive/personas/godwin.html', keywords: 'archived, former member, knight, bachelor, agincourt, chivalry', period: 'Late Medieval' },
             { type: 'persona', title: 'Lady Edith Black (Archived)', url: 'archive/personas/edith.html', keywords: 'archived, former member, lady, household, medieval woman', period: 'Late Medieval' },
-            { type: 'persona', title: 'Stephanus Attebregge', url: 'personas/stephanus.html', keywords: 'man-at-arms, veteran, ale brewer', period: 'Late Medieval' },
+            { type: 'persona', title: 'Stephanus Attebregge (Archived)', url: 'archive/personas/stephanus.html', keywords: 'archived, former member, man-at-arms, veteran, ale brewer', period: 'Late Medieval' },
             { type: 'persona', title: 'Robert Fastolf', url: 'personas/robert-fastolf.html', keywords: 'man-at-arms, sea-rover, soldier', period: 'Late Medieval' },
             { type: 'persona', title: 'Jóhanna "Jóka" Olafsdottir', url: 'personas/joka.html', keywords: 'princess, norway, exile, danelaw', period: 'Early Medieval' },
             { type: 'persona', title: 'Merchant Lady Sue', url: 'personas/merchant-lady-sue.html', keywords: 'merchant, businesswoman, trade', period: 'High Medieval' },
@@ -55,6 +55,10 @@ class MedievalSearch {
             { type: 'page', title: 'Getting Started Guide', url: 'getting-started.html', keywords: 'beginner, join, equipment, new member', period: 'All' },
             { type: 'page', title: 'Queensland Medieval Groups', url: 'queensland-medieval-groups.html', keywords: 'groups, queensland, australia, re-enactment', period: 'Modern' },
             { type: 'page', title: 'Society Policies', url: 'policies.html', keywords: 'policies, rules, constitution, bylaws', period: 'Modern' },
+            { type: 'page', title: 'Society Constitution', url: 'constitution.html', keywords: 'constitution, incorporation, governing document, rules', period: 'Modern' },
+            { type: 'page', title: 'Past Events', url: 'past-events.html', keywords: 'past events, fraser pop, abbey festival, photo highlights', period: 'Modern' },
+            { type: 'page', title: 'Photo Gallery', url: 'photo-gallery.html', keywords: 'photos, gallery, events, personas, combat, crafts', period: 'Modern' },
+            { type: 'page', title: 'Fellowship of the Bow and Blade 2026', url: 'events.html#fellowship-bow-and-blade-2026', keywords: 'fellowship, bow and blade, aldershot, archery, combat, feast, august 2026', period: 'Modern' },
             { type: 'page', title: 'Website Version Log', url: 'version-log.html', keywords: 'version log, changelog, website updates, history', period: 'Modern' },
             { type: 'page', title: 'Activities', url: 'activities.html', keywords: 'activities, combat, archery, workshops, crafts, persona', period: 'Modern' },
             { type: 'page', title: 'Activities: Medieval Cooking', url: 'activities-cooking.html', keywords: 'medieval cooking, feast, camp kitchen, breads, roasts, stew', period: 'Modern' },
@@ -203,17 +207,28 @@ class MedievalSearch {
     createResultHTML(result) {
         const icon = this.getIconForType(result.type);
         const periodBadge = result.period !== 'Modern' ? `<span class="period-badge">${result.period}</span>` : '';
+        const href = this.resolveUrl(result.url);
         
         return `
             <div class="search-result-item">
                 <span class="material-icons result-icon">${icon}</span>
                 <div class="result-content">
-                    <h4><a href="${result.url}">${result.title}</a></h4>
+                    <h4><a href="${href}">${result.title}</a></h4>
                     <p class="result-keywords">${result.keywords}</p>
                     ${periodBadge}
                 </div>
             </div>
         `;
+    }
+
+    resolveUrl(url) {
+        if (!url || /^(https?:|mailto:|#)/i.test(url)) {
+            return url;
+        }
+        if (typeof getSiteRootPrefix === 'function') {
+            return `${getSiteRootPrefix()}${url}`;
+        }
+        return url;
     }
 
     getIconForType(type) {
@@ -239,7 +254,5 @@ class MedievalSearch {
     }
 }
 
-// Initialize search when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new MedievalSearch();
-});
+// Initialize search only after the shared nav creates #search-input.
+// navigation.js owns initialization once the header is injected.
