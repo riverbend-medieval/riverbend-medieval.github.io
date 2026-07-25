@@ -31,6 +31,7 @@ class MedievalSearch {
             { type: 'persona', title: 'James Leslie', url: 'personas/james-leslie.html', keywords: 'man-at-arms, scottish, warrior', period: 'Late Medieval' },
             { type: 'persona', title: 'Sergeant Douglas', url: 'personas/sergeant-douglas.html', keywords: 'sergeant, military, trainer', period: 'Late Medieval' },
             { type: 'persona', title: 'Bowyer', url: 'personas/bowyer.html', keywords: 'bow maker, archer, craftsman', period: 'Late Medieval' },
+            { type: 'persona', title: 'Jackson Stanton', url: 'personas/jackson-stanton.html', keywords: 'turnip farmer, yeoman, archer, stanton, widow, late medieval', period: 'Late Medieval' },
             { type: 'persona', title: 'Olivine du Pont', url: 'personas/olivine-du-pont.html', keywords: 'french, noblewoman, adventurer', period: 'Late Medieval' },
             { type: 'persona', title: 'Pierre du Pont', url: 'personas/pierre-du-pont.html', keywords: 'french, noble, companion', period: 'Late Medieval' },
             { type: 'persona', title: 'Sir Michael', url: 'personas/sir-michael.html', keywords: 'knight, order of the stag and thistle', period: 'Late Medieval' },
